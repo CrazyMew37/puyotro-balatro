@@ -1,0 +1,18 @@
+{
+  "id": "puyotro",
+  "name": "Puyotro",
+  "author": [
+    "CrazyMew37"
+  ],
+  "description": "A collection of Jokers based on Puyo Puyo made by CrazyMew37, made with Joker Forge",
+  "prefix": "puyotro",
+  "main_file": "main.lua",
+  "version": "1.0.0",
+  "priority": 0,
+  "badge_colour": "33cc00",
+  "badge_text_colour": "FFFFFF",
+  "dependencies": [
+    "Steamodded (>=1.0.0~BETA-0827c)",
+    "Talisman"
+  ]
+}

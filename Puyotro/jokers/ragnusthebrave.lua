@@ -1,0 +1,53 @@
+
+SMODS.Joker{ --Ragnus the Brave
+    key = "ragnusthebrave",
+    config = {
+        extra = {
+            currentscoringmult = 0,
+            currentscoringchips = 0,
+            xmult0 = 1.5
+        }
+    },
+    loc_txt = {
+        ['name'] = 'Ragnus the Brave',
+        ['text'] = {
+            [1] = '{X:red,C:white}X1.5{} Mult if Mult',
+            [2] = '{C:attention}exceeds{} Chips'
+        },
+        ['unlock'] = {
+            [1] = 'Unlocked by default.'
+        }
+    },
+    pos = {
+        x = 8,
+        y = 0
+    },
+    display_size = {
+        w = 71 * 1, 
+        h = 95 * 1
+    },
+    cost = 4,
+    rarity = 1,
+    blueprint_compat = true,
+    eternal_compat = true,
+    perishable_compat = true,
+    unlocked = true,
+    discovered = true,
+    atlas = 'CustomJokers',
+    pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true },
+    
+    loc_vars = function(self, info_queue, card)
+        
+        return {vars = {mult, hand_chips}}
+    end,
+    
+    calculate = function(self, card, context)
+        if context.cardarea == G.jokers and context.joker_main  then
+            if to_big(mult) > to_big(hand_chips) then
+                return {
+                    Xmult = 1.5
+                }
+            end
+        end
+    end
+}
