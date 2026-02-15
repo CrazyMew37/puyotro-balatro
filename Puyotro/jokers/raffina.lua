@@ -49,7 +49,7 @@ SMODS.Joker{ --Raffina
                     G.E_MANAGER:add_event(Event({
                         func = function()
                             
-                            scored_card:set_ability(G.P_CENTERS.m_bonus)
+                            scored_card:set_ability(G.P_CENTERS.m_gold)
                             card_eval_status_text(scored_card, 'extra', nil, nil, nil, {message = "Poof!", colour = G.C.ORANGE})
                             return true
                         end

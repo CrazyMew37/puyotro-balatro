@@ -8,7 +8,7 @@
     "description": "A collection of Jokers based on Puyo Puyo made by CrazyMew37, made with Joker Forge",
     "prefix": "puyotro",
     "main_file": "main.lua",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "priority": 0,
     "badge_colour": "33cc00",
     "badge_text_colour": "FFFFFF",
@@ -438,6 +438,7 @@
       ],
       "orderValue": 1,
       "objectType": "joker",
+      "info_queues": [],
       "card_dependencies": []
     },
     {
@@ -2733,7 +2734,7 @@
                       "valueType": "unknown"
                     },
                     "new_enhancement": {
-                      "value": "m_bonus",
+                      "value": "m_gold",
                       "valueType": "unknown"
                     },
                     "new_seal": {
@@ -7126,7 +7127,8 @@
                   "valueType": "text"
                 },
                 "count": {
-                  "value": "2"
+                  "value": "2",
+                  "valueType": "unknown"
                 },
                 "enhancement": {
                   "value": "m_puyotro_puyocard",
@@ -7237,7 +7239,8 @@
                   "valueType": "text"
                 },
                 "count": {
-                  "value": "2"
+                  "value": "2",
+                  "valueType": "unknown"
                 },
                 "enhancement": {
                   "value": "m_puyotro_nuisancecard",
@@ -7332,7 +7335,8 @@
                   "valueType": "text"
                 },
                 "count": {
-                  "value": "2"
+                  "value": "2",
+                  "valueType": "unknown"
                 },
                 "enhancement": {
                   "value": "none",
@@ -8369,7 +8373,6 @@
                 },
                 "edition": {
                   "value": "none",
-                  "label": "No Edition",
                   "valueType": "text"
                 },
                 "sticker": {
@@ -8378,7 +8381,6 @@
                 },
                 "ignore_slots": {
                   "value": "respect",
-                  "label": "Respect",
                   "valueType": "text"
                 }
               }
@@ -8405,7 +8407,6 @@
                 },
                 "edition": {
                   "value": "none",
-                  "label": "No Edition",
                   "valueType": "text"
                 },
                 "sticker": {
@@ -8414,7 +8415,6 @@
                 },
                 "ignore_slots": {
                   "value": "respect",
-                  "label": "Respect",
                   "valueType": "text"
                 }
               }
@@ -8441,7 +8441,6 @@
                 },
                 "edition": {
                   "value": "none",
-                  "label": "No Edition",
                   "valueType": "text"
                 },
                 "sticker": {
@@ -8450,7 +8449,6 @@
                 },
                 "ignore_slots": {
                   "value": "respect",
-                  "label": "Respect",
                   "valueType": "text"
                 }
               }
@@ -8460,7 +8458,8 @@
               "type": "edit_joker_slots",
               "params": {
                 "operation": {
-                  "value": "add"
+                  "value": "add",
+                  "valueType": "unknown"
                 },
                 "value": {
                   "value": 1,
@@ -8968,5 +8967,5 @@
     }
   ],
   "version": "1.0.0",
-  "exportedAt": "2026-02-13T00:25:26.318Z"
+  "exportedAt": "2026-02-14T23:58:29.579Z"
 }
