@@ -8,7 +8,7 @@
     "description": "A collection of Jokers based on Puyo Puyo made by CrazyMew37, made with Joker Forge",
     "prefix": "puyotro",
     "main_file": "main.lua",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "priority": 0,
     "badge_colour": "33cc00",
     "badge_text_colour": "FFFFFF",
@@ -579,9 +579,8 @@
                   "negate": false,
                   "params": {
                     "enhancement": {
-                      "key": "m_stone",
                       "value": "m_stone",
-                      "label": "Stone"
+                      "valueType": "unknown"
                     }
                   }
                 }
@@ -632,21 +631,24 @@
                   "type": "edit_playing_card",
                   "params": {
                     "new_rank": {
-                      "value": "none"
+                      "value": "none",
+                      "valueType": "unknown"
                     },
                     "new_suit": {
-                      "value": "none"
+                      "value": "none",
+                      "valueType": "unknown"
                     },
                     "new_enhancement": {
-                      "key": "m_stone",
                       "value": "m_stone",
-                      "label": "Stone"
+                      "valueType": "unknown"
                     },
                     "new_seal": {
-                      "value": "none"
+                      "value": "none",
+                      "valueType": "unknown"
                     },
                     "new_edition": {
-                      "value": "none"
+                      "value": "none",
+                      "valueType": "unknown"
                     }
                   }
                 }
@@ -1989,7 +1991,6 @@
               "params": {
                 "operation": {
                   "value": "multiply",
-                  "label": "Multiply By",
                   "valueType": "text"
                 },
                 "value": {
@@ -1997,12 +1998,6 @@
                   "valueType": "number"
                 },
                 "limit_dollars": {
-                  "value": [
-                    false,
-                    false,
-                    false,
-                    false
-                  ],
                   "valueType": "checkbox"
                 },
                 "min_earnings": {
@@ -2182,11 +2177,11 @@
                   "params": {
                     "consumable_type": {
                       "value": "Tarot",
-                      "label": "Tarot",
-                      "key": "tarot"
+                      "valueType": "unknown"
                     },
                     "specific_card": {
-                      "value": "any"
+                      "value": "any",
+                      "valueType": "unknown"
                     }
                   }
                 }
@@ -2214,19 +2209,21 @@
                   "params": {
                     "set": {
                       "value": "Spectral",
-                      "label": "Spectral",
-                      "key": "spectral"
+                      "valueType": "unknown"
                     },
-                    "variable": {},
+                    "variable": {
+                      "valueType": "unknown"
+                    },
                     "specific_card": {
-                      "value": "random"
+                      "value": "random",
+                      "valueType": "unknown"
                     },
                     "soulable": {
-                      "value": "n"
+                      "value": "n",
+                      "valueType": "unknown"
                     },
                     "is_negative": {
                       "value": "y",
-                      "label": "Negative Edition",
                       "valueType": "text"
                     },
                     "count": {
@@ -2235,7 +2232,6 @@
                     },
                     "ignore_slots": {
                       "value": "y",
-                      "label": "True",
                       "valueType": "text"
                     }
                   }
@@ -2563,19 +2559,14 @@
               "type": "set_dollars",
               "params": {
                 "operation": {
-                  "value": "add"
+                  "value": "add",
+                  "valueType": "unknown"
                 },
                 "value": {
                   "value": 8,
                   "valueType": "number"
                 },
                 "limit_dollars": {
-                  "value": [
-                    false,
-                    false,
-                    false,
-                    false
-                  ],
                   "valueType": "checkbox"
                 },
                 "min_earnings": {
@@ -4957,7 +4948,7 @@
                   "params": {
                     "edition": {
                       "value": "any",
-                      "label": "Any Edition"
+                      "valueType": "unknown"
                     }
                   }
                 }
@@ -4989,7 +4980,7 @@
                 },
                 "new_enhancement": {
                   "value": "none",
-                  "label": "Don't Change"
+                  "valueType": "unknown"
                 },
                 "new_seal": {
                   "value": "none",
@@ -4997,7 +4988,7 @@
                 },
                 "new_edition": {
                   "value": "remove",
-                  "label": "Remove Edition"
+                  "valueType": "unknown"
                 }
               }
             }
@@ -5025,7 +5016,7 @@
                   "params": {
                     "enhancement": {
                       "value": "any",
-                      "label": "Any Enhancement"
+                      "valueType": "unknown"
                     }
                   }
                 }
@@ -5057,7 +5048,7 @@
                 },
                 "new_enhancement": {
                   "value": "remove",
-                  "label": "Remove Enhancement"
+                  "valueType": "unknown"
                 },
                 "new_seal": {
                   "value": "none",
@@ -5065,7 +5056,7 @@
                 },
                 "new_edition": {
                   "value": "none",
-                  "label": "Don't Change"
+                  "valueType": "unknown"
                 }
               }
             }
@@ -5692,9 +5683,8 @@
                   "negate": false,
                   "params": {
                     "enhancement": {
-                      "key": "m_wild",
                       "value": "m_wild",
-                      "label": "Wild"
+                      "valueType": "unknown"
                     }
                   }
                 },
@@ -5704,9 +5694,8 @@
                   "negate": true,
                   "params": {
                     "edition": {
-                      "key": "e_polychrome",
                       "value": "polychrome",
-                      "label": "Polychrome (X1.5 Mult)"
+                      "valueType": "unknown"
                     }
                   }
                 }
@@ -5719,21 +5708,24 @@
               "type": "edit_playing_card",
               "params": {
                 "new_rank": {
-                  "value": "none"
+                  "value": "none",
+                  "valueType": "unknown"
                 },
                 "new_suit": {
-                  "value": "none"
+                  "value": "none",
+                  "valueType": "unknown"
                 },
                 "new_enhancement": {
-                  "value": "none"
+                  "value": "none",
+                  "valueType": "unknown"
                 },
                 "new_seal": {
-                  "value": "none"
+                  "value": "none",
+                  "valueType": "unknown"
                 },
                 "new_edition": {
-                  "key": "e_polychrome",
                   "value": "polychrome",
-                  "label": "Polychrome (X1.5 Mult)"
+                  "valueType": "unknown"
                 }
               }
             }
@@ -5760,9 +5752,8 @@
                   "negate": false,
                   "params": {
                     "enhancement": {
-                      "key": "m_wild",
                       "value": "m_wild",
-                      "label": "Wild"
+                      "valueType": "unknown"
                     }
                   }
                 },
@@ -5772,9 +5763,8 @@
                   "negate": false,
                   "params": {
                     "edition": {
-                      "key": "e_polychrome",
                       "value": "polychrome",
-                      "label": "Polychrome (X1.5 Mult)"
+                      "valueType": "unknown"
                     }
                   }
                 }
@@ -6402,22 +6392,24 @@
               "type": "edit_playing_card",
               "params": {
                 "new_rank": {
-                  "value": "none"
+                  "value": "none",
+                  "valueType": "unknown"
                 },
                 "new_suit": {
-                  "value": "none"
+                  "value": "none",
+                  "valueType": "unknown"
                 },
                 "new_enhancement": {
                   "value": "random",
-                  "label": "Random"
+                  "valueType": "unknown"
                 },
                 "new_seal": {
                   "value": "random",
-                  "label": "Random"
+                  "valueType": "unknown"
                 },
                 "new_edition": {
                   "value": "random",
-                  "label": "Random"
+                  "valueType": "unknown"
                 }
               }
             }
@@ -7589,7 +7581,6 @@
                   "params": {
                     "blind_type": {
                       "value": "boss",
-                      "label": "Boss Blind",
                       "valueType": "text"
                     }
                   }
@@ -7603,18 +7594,22 @@
               "type": "create_consumable",
               "params": {
                 "set": {
-                  "value": "random"
+                  "value": "random",
+                  "valueType": "unknown"
                 },
-                "variable": {},
+                "variable": {
+                  "valueType": "unknown"
+                },
                 "specific_card": {
-                  "value": "random"
+                  "value": "random",
+                  "valueType": "unknown"
                 },
                 "soulable": {
-                  "value": "n"
+                  "value": "n",
+                  "valueType": "unknown"
                 },
                 "is_negative": {
                   "value": "y",
-                  "label": "Negative Edition",
                   "valueType": "text"
                 },
                 "count": {
@@ -7623,7 +7618,6 @@
                 },
                 "ignore_slots": {
                   "value": "y",
-                  "label": "True",
                   "valueType": "text"
                 }
               }
@@ -7692,20 +7686,14 @@
               "type": "set_dollars",
               "params": {
                 "operation": {
-                  "value": "add"
+                  "value": "add",
+                  "valueType": "unknown"
                 },
                 "value": {
                   "value": "PararaMoney",
-                  "label": "PararaMoney",
                   "valueType": "conflicted_user_var"
                 },
                 "limit_dollars": {
-                  "value": [
-                    false,
-                    false,
-                    false,
-                    false
-                  ],
                   "valueType": "checkbox"
                 },
                 "min_earnings": {
@@ -10036,20 +10024,14 @@
               "type": "set_dollars",
               "params": {
                 "operation": {
-                  "value": "add"
+                  "value": "add",
+                  "valueType": "unknown"
                 },
                 "value": {
                   "value": "SchezoMoney",
-                  "label": "SchezoMoney",
                   "valueType": "conflicted_user_var"
                 },
                 "limit_dollars": {
-                  "value": [
-                    false,
-                    false,
-                    false,
-                    false
-                  ],
                   "valueType": "checkbox"
                 },
                 "min_earnings": {
@@ -11302,15 +11284,16 @@
               "type": "set_sell_value",
               "params": {
                 "target": {
-                  "value": "specific"
+                  "value": "specific",
+                  "valueType": "unknown"
                 },
                 "specific_target": {
                   "value": "self",
-                  "label": "This Joker",
                   "valueType": "text"
                 },
                 "operation": {
-                  "value": "add"
+                  "value": "add",
+                  "valueType": "unknown"
                 },
                 "value": {
                   "value": 3,
@@ -12246,20 +12229,14 @@
               "type": "set_dollars",
               "params": {
                 "operation": {
-                  "value": "add"
+                  "value": "add",
+                  "valueType": "unknown"
                 },
                 "value": {
                   "value": "SatanMoney",
-                  "label": "SatanMoney",
                   "valueType": "user_var"
                 },
                 "limit_dollars": {
-                  "value": [
-                    false,
-                    false,
-                    false,
-                    false
-                  ],
                   "valueType": "checkbox"
                 },
                 "min_earnings": {
@@ -13013,7 +12990,8 @@
                   "valueType": "text"
                 },
                 "count": {
-                  "value": "2"
+                  "value": "2",
+                  "valueType": "unknown"
                 },
                 "enhancement": {
                   "value": "m_puyotro_puyocard",
@@ -13108,7 +13086,8 @@
                   "valueType": "text"
                 },
                 "count": {
-                  "value": "2"
+                  "value": "2",
+                  "valueType": "unknown"
                 },
                 "enhancement": {
                   "value": "none",
@@ -13219,7 +13198,8 @@
                   "valueType": "text"
                 },
                 "count": {
-                  "value": "2"
+                  "value": "2",
+                  "valueType": "unknown"
                 },
                 "enhancement": {
                   "value": "m_puyotro_nuisancecard",
@@ -14387,7 +14367,7 @@
       "objectType": "deck",
       "id": "25ca49e2-72c2-4258-852d-4e479e607278",
       "name": "Suzuran Deck",
-      "description": "Begin with an [s]{C:attention}Eternal Ringo{}, {C:attention}Maguro{},[s] and {C:attention}Risukuma{}[s]{C:attention}+1{} Joker Slot[s]{C:attention}Creates{} a specific [s]{C:spectral}Negative {C:spectral}Spectral{} Card{}[s]at the end of each round[s]({C:attention}Small Blinds{} give {C:purple}Medium{}[s]{C:attention}Big Blinds{} give {C:gold}Talisman{}[s]{C:attention}Boss Blinds{} give {C:red}Deja Vu{})",
+      "description": "Begin with an [s]{C:attention}Eternal Ringo{}, {C:attention}Maguro{},[s] and {C:attention}Risukuma{}[s]{C:attention}+2{} Joker Slots[s]{C:attention}Creates{} a specific [s]{C:spectral}Negative {C:spectral}Spectral{} Card{}[s]at the end of each round[s]({C:attention}Small Blinds{} give {C:purple}Medium{}[s]{C:attention}Big Blinds{} give {C:gold}Talisman{}[s]{C:attention}Boss Blinds{} give {C:red}Deja Vu{})",
       "imagePreview": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI4AAAC+CAYAAADjhzelAAAQAElEQVR4AexdAbrbLA50eqS/h+p/pO2hukfabsaObIwREkJg7Ph9JRgQo5EYkffatP0xlX69Sjc89lIGrpjScuH8ldLwrJdm4IopFYXz9/n6ygxI4heFIwE869+ZgYNw4vL6zrQ8UUs6OAjnSVmvDFzxO5stN49wtlx0fjL8LDWQ1roLZ5oGir6zVKrdGbRW7ZMBWIVD72mM3fT69cep/dcJx4tPAuffP1wa1nlrPlYA5qEVLrmT8Mku7mN9rMKJDb96/FyK4vGLwiGFikg3M5Di/vv754RWGvZZuMQTnNFoHPcSP7IXhUOGw/UDvd/bcnPta+26wgnzXiWi/GapAlG9aKXief1avtfj9gETjVvn5iW+tA/YaDQu7ffCCQ+jFOlM+yreVZtdonZjkK8BF64EshdOR8dEoHnv5ECqZFQvWqk74P54/8TK7QMmGre+mw8UCFy03XpiAGy0xFJ2ai+crKm8+OhOzlEXiw4H4SqcQPBd8nOGE1QxGucb1YvGrXPzwETj1oGJxq3v5oODACbabj0xADZaYik55SqcpIfqyQ7lU83x+wAuIJygfBzOB1WlaZIrVDFa2u7v/Hs88JNe52eBicZZABMtXpfKC5ho8b54DGy0eD4eX0A4MeUrjKVj9I8hX14+fEIftxcOqids3keGKkbjcMk3t87NAxONWy/D3Y4cmGgcbm4+lN/thZNLRJu170C9nXCoEqnvdYyoYjTOn5UPMNF643L+aJ4Vzna5kenTPxnYMsAKJ3w/28zHfbJWdBwRqhstnteOsReNs7fyBCZaG9z/crDsPCscdsezcMMMlL+/XF441gpuffq4HdA4P1bewETrjRv7u45wrvbeGWfaaTxKGlTC2chuT0550MN8blOqVOpTAB/T1BI7hypGYw2MC8BE47bn4uD2YB6YaNM0YXhorXDJkUo4loMgB2f0enm3iEzv3ZKbFowtPFTC2YBraL+m1wY0yFMLRukc4XZA4wJvdUNYcTmeNF8oHNpm6d9/8GfZdrs9aWFdLcyOwqlLTavKwS2AVsdOv/uszxp75+8ywtEfzWPZIwPDC8e7Unok9ejj+L0Ubjm0o+0yY40bmGgLyvHVihsjDS+cmHDd2P/7i6MkUgz9/aa89JqDH71wdBkC5sDNP4haSeB2QOOSZr0hgInmjUt4euFkM+R/IEQw1WeppDY8c+4Z0Asn67rvUXaVaSdnuB3QuDSPdvM4CYcL9wbzfWvik7BTnH5867phhWOtMF3Y41rh1sHv9XAMrXlZcPl/96cUd1jhcIl75sfIwG2EQxVF/RjptbOQ4ii9IYiJF25X4azk6WHkvtM3xUsKujpbXFa+niIczbd+UmVQ3JwdzVNP9upeQ1INJhnyziT+rW4eifEpwpFIJdf53CbNn8l0Brzuth+lH5LxcpwOKzMbOZYqMYPEL0U+eMP+K1K82psnrj8Jl4v0R+k/Oxw75oCP8y1PxQnbHtwx3JvP/OgXn++p7CvMjk041FvzYZdu2U7phpjj+M/P4jAk3Biwo3Bi1/caF0l3p5Xczp2hPmHGbXoH0zS8cEorYRd8MNDizBX7+TeM8RxA+D3mtLLzwhtK8YA72g5OMZBwCWJ44RDRpx8rA5cXDqoKTZtWbUURHrDDRvOj9FI8xN2b7+WF452QB0+XAZNwXjH2YSI20I+pQuKeQ5AqTtpXuj/mRePS3w/jeFnnpThWnlYH0T6TcA7fsh0mIi/fMPyyHJiEo9eBfBVRJVCvxeYqjHDiXsIlPOol+3id/MXzvccS/zxP+bwonsbC+bIynCitV+3159VYOHwC88oP9+2DiSuKcKgPd4bP0npoi2fyE/dYy7VSPzmsmjXizWHU8jxNOFxAx3n99Xnc+10zPTPVXTi1SicpcDhUaXOv+L81CU/bz7i//qz/ryi3j+PH2XvM7+/mBZH4LqPjq5VntXB6qvwYtjCTyqSw5VnWZaBaOPPZZNRDiqZeokUVwvW0X1rX+iM8a088rPt77ZN4luarWjhz4LN65qd7v2QK5E6Ba8L0EU4ia1oFUyVQn4BSTyFgzq8HfumH3kCc44M1h1YMIeUBfP/3W/48j4NwcFzF/Jts+I6Lb4x8OwjHdlyS8r2UdTc/k+XaSySzNi8OwkmweqZunwF34eA9Es07c8BMNW8/rfCIeyt8K6715nEXDgVgewOj3Q796QQcYmgB4fQtkptw4ori+FkVrs3his8RiICIN/XRcvFw9V+8s9MGpqBKebsJp1PYj5vWGWCERW6pH1440k3ArUsVxO3j5ilhd+9f7z/fQ+6kOJsKRyleieOzPmAGmgon/DYDKkaLcxDaTOIHd49SBCbaFH19+80RpcN9qBPO/nRdSeylsB8dHTUkcnT2zGQyoBOOdJ4ZB9Yl640h7VvW/7HSevZ9MrATjq8+fNE+fPed2QVuLvPmPQfzCBzMm0/fuBNOeSivaang1J+mlqMVZ6PKRdXmYqrHDWcL98ioZGYnnJKNi20++HB1sX9eDxk4W78HQsFE5gArhRM4STy2zAl+kkJLuL3WVOZwTg8EB8jwayqc0wMXCDA5EXaVL/fyU85MsQPiSZgNKxzcJmgxZ8yhxfM0xlrYaD7VMzlJmVbNFfkpMq6iVbW5mXAuXWVVKa3cfJHENROOV+GEtweeK49F3A4faKLhlxs0E86X5/X24VcLB9WJtmRKf8/S7/9Qv+yPXmuurQiKhuCKRmPqMYdGY9denxZXty3BqoWzJ+d80nPCfTB9UPbRqkenOlezLDJ0Fk6R750x3Txx7/Wp/lmDgUfcLmv798+6Qv7XicKH2v2F7k4zH0Y4p2UAjmNVYe5p2QwMLxyqYOqz0RQsEl7cEwTNT+JnhCbVF91uKuMuRnXvn4MIR1nySjPfvJ/i1DeEJFpdXLNw6rS3sJIqaqvgxX7/qmTwNiOc2n7vv3608Cn/nM+y7+f6KQMa1zOqR8hJaxZOzqDe/bcgIM63stHdpOWimYVzRpzSDVXHqV8pSDcExUl2cb/GGVGO7eLxuu+kBzfh5NTZK7Yt9yOwKYz6YpTdhEOHRhVWmDYXc8/cS3HQDSAR19pJOPE64VIfr7ce74VDp9/aazP8ywfQLDPewHvhOJasVLEUiNaO7PO9LYBQbhwfqmzq8zz0q+Qv7vUIi6U3rwWVf90Lh7cbaiU8aA9iNrl5eL4uRnPhpCoJB0UVQn3Kjksr9nNr1nnyH+8nfvG815jDJz5xH/hNPnJ4SeOKyebCSXHzvjFSPp65thnoLhxtRcSVFo+taYlxaBzjaXnG+1JjTaFo/RFf6lP+esx1F06PoEbzsb21aiQ0Gvs0n27C0VZUmuZxliqutD8iLTPEj/plVv9KPPI7NglxduSfes5Omrftl/mR327CIYe1vSY0jU0tj3vu39+I+9E+4ubCsSl/iv60+J91jH/1G5j7MPajXMDYm2p7hEn832Gmz5fupvkYG7oU13DOAKnekivA5sIRWeZOed2cC2E1eh4aZyCEP184Rk2EVVfyHAYfPtPNMff//llvuNAmfJ7tftV/VjnGCX14PFNuPLBCjH7CUd0sIbUTn6/E9aQ0NRPOQemFN8tcie/K98rLjPe+Ibhe64f2l9pz+w550gKfbNdMOC5xXbHyr8jZcFinC4erRIqF1mt7wpP66hug8GaV+NB6Kv4f7xuU1nv3lcJplKVsFnr7HPcKUTFTGWUTnlysFE4jVkmqNNnb5yJUqnhiQT13Q3H2tC/uJXvJD7t/oR+7qx5XCkfn/7FqlYFGqlDQFYXDKV2BnTShyqA+aTTs5HZQa146XYDpfEnOpXV7okXh2KHvuDNxEJuWBgy4HTm1cNYKU6aHKiTulduHNdPmYbPTHR7Zx/misZQQ2i/ZLes6Tott+lUtnPT292w9hzfInX8lbqnTw63nVCycg7LrOZyeRg2BQ9yaTQabUj+l9gZKyS3FwkmiPJNflwFRONyFcpbSVSekMRr8LZbyK/WaUFvYiMIZPL/2nHAVYUdsunM0urJw3n8egu/suaxQRXDrd51HTtC08Ul5koTRrICNwKJwtIl57OoyYDy/OqfYLSkWNommFg6qCy2BMU+xFXVaRmZa7i/IARoB4xmNxtRjDo3GXA+bVOPsuXnC4Na959XCMTs2Ktrs79nYJQPFwpGUjZsHfxPBxn786wnxocXxUV6op3XYotFY2xOOtocPNC1+rV2xcDQO7cd/1etJk5Ur2cgnaBbOXAmZzwRD/WhXShe4znG9f5LEc64hNk3jMLR+uP3aeZsfuYDNwpmJy/iz2fNyvwzUCeedD0nRqEr79zxvByf9kuKy0sLnhIFt3R/vQ37R4vnW42rhaAjK75galMY2nUh2u6QbOxKEo/eOKkLjjhdVgcatW+Zdz1ofqoXq4e+iIxepZgJPbHq9v//MnUdiS9GUIBzXo5m8z8YbryhzX268E47HQUDlaKm8QoZUZan1EecQS9isHClu6q04n33i320nu1b9Tjg42FaOHtx7ZWAnnFRoJRUSCo+qNIWJuRJc2Oda6Ddn57EmxeXhI4eBvOV+Su3FTxROLoh4zeOtLsbUjP389pSgJrK0zQgs1cKB0tHSoUzs/yOXrIDgpIGJNvX6ymY9ICbwobioT5vr8Xb7ExyRI7SdXTDI8wgM1Y957mrhSP7ybqLdicREFtGweEO0PxgWEQ32mR6NvLty5ALLcy8WDlSPxrnj5qWKACZaev8QmUxT+8xSfFL/MRc75CJs3Abyx623mi8WTisiD+7ZGcjfMDE7s3CoGmJAaXyokOgyseJKfq+yro3/kMfqAKODEPDMwhFw9ctlQtfjXsSy7LjGCUoUjqRsbYXEIZtxLyo0Lk+l4Uh5i/PcaiwKp5VjM+5VS9Qc8Jgb1cKRlL5VVFkN6XHbJLCMbSmHV/WfKVF+qC9l0MpeLRw9gWtdCW3ZtkXXnwlvaS2cYuFIyt9uHp5saqUVbspXzzkprpgL2VMfr3uPy6S9WRcL50h8AzuuTdM95qx1eY/otyi2PJiFs1XEBrY52P73l3BO87zhpq2tN1oaTTtbXxwUl9RrGZ1tZxYOEa9PKSHV92kJ1+P6IlyDpRRztXCkT+1bbwiqTC6AFO5IIuZ4v+9ifqnbSr14q4VTT6Fbth5HawbqS6xaOETBckOscWQeWuFmXD5LigxUC0fh4zHpmYFObwHuwml1Q6hxex7SiL7oLaAxN71wskrOLjYO4YE/IwOicNafXrJKPi62uiFa4Z6R/Cv7FIVz5eAe7iUZKHvXUAtnvXlKuLxtW90QB9zo0rPyfVNu/6vsjNrzmT1ECZzn+Be1cHiIBiuWxFr2NKCugiw7IxVkb6Ni4WyVrDypj9nhhogi3XDfCwWJLcJ9Q1/v1yeBgxEvFs7GPz5dJsDYbAPo87T6Z/hVs2gNsAbQ2lERvlk4uxtidqkLsNUNweJ+9PL39z/zp/Fmqs9LdQbMwqn2RbC8TwAAAhxJREFUfHmAjyIvH4ctgGrh/P39M1PJfHLZG+ITRx73YxR2H1c+uB+wEP/wrLthD9taT2ioO3CoFk6eQ4/kfjLl6moD+6DnwxxpdaPelJUoHKmCiV3xDfHZKOHLuOlM1eMuBNPoyxr7T3R8lv27cWQsCsc/+BshZlUVxul14GqHofMmzwnhpMlJFUzs5BuCLPd9Gn/j4ou7+bbibgiapy0OjbVgM8RyQjhCdXTNgcBliBR+J4mEcPKJ0P77udZKTt88G6excL9X2MXC2Y7weRrjg+fnnINZONLNQOGMdUNMh3/hfIq+rHwjmNsPzcK5fWaeALMZqBbOc/Nk83vbxWrh6DLT9UcxHaVeVp7fP3tiFcSfMhWFo3vPfwnfO7xW3zq81Xx9kG620XBX4p4144m1Etw/aPO4CaeKVNXmPfOvHm0FNnoaVuG8frzmL44wKVHquf3xvITDrcc48ZjbJ80vOHwBSPt91pfPDPlgLZ9aKMVa8nB8ncXxfqGVVTg0UdvzqS9F9kPSez634s+IOJubDCF34fil3g8pmxzDYiafR7QC4/qIZWeyRRBChpC7cAK3t33M5PMYc5HxcXvZjOxMttB5PAjn/Ta2+6WDeaz2GSiq6/1W75GRyk4E70FM6yCc2KBmPPJeYz6VIXnVtdJdzqwRFVE4b7Hd7Nfy4+PyyocmrfM777GS0yLWROHA6F5Nd9forO6VmZJo/g8AAP//Ci3twwAAAAZJREFUAwAuBUcimhzprgAAAABJRU5ErkJggg==",
       "unlocked": true,
       "discovered": true,
@@ -14513,7 +14493,7 @@
                   "valueType": "unknown"
                 },
                 "value": {
-                  "value": 1,
+                  "value": 2,
                   "valueType": "number"
                 }
               }
@@ -14730,5 +14710,5 @@
     }
   ],
   "version": "1.0.0",
-  "exportedAt": "2026-02-18T03:51:29.398Z"
+  "exportedAt": "2026-02-18T08:17:36.706Z"
 }

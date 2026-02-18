@@ -10,7 +10,7 @@ SMODS.Back {
             [1] = 'Begin with an',
             [2] = '{C:attention}Eternal Ringo{}, {C:attention}Maguro{},',
             [3] = 'and {C:attention}Risukuma{}',
-            [4] = '{C:attention}+1{} Joker Slot',
+            [4] = '{C:attention}+2{} Joker Slots',
             [5] = '{C:attention}Creates{} a specific',
             [6] = '{C:spectral}Negative {C:spectral}Spectral{} Card{}',
             [7] = 'at the end of each round',
@@ -125,6 +125,6 @@ SMODS.Back {
                 return true
             end
         }))
-        G.GAME.starting_params.joker_slots = G.GAME.starting_params.joker_slots + 1
+        G.GAME.starting_params.joker_slots = G.GAME.starting_params.joker_slots + 2
     end
 }
