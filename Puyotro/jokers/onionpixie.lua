@@ -3,7 +3,7 @@ SMODS.Joker{ --Onion Pixie
     key = "onionpixie",
     config = {
         extra = {
-            blind_size0 = 0.75
+            blind_size0 = 0.65
         }
     },
     loc_txt = {
@@ -11,21 +11,21 @@ SMODS.Joker{ --Onion Pixie
         ['text'] = {
             [1] = '{C:attention}Sell{} this card to',
             [2] = '{C:attention}decrease{} the current',
-            [3] = 'blind by 25%.'
+            [3] = 'blind by {C:attention}35%{}'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
         }
     },
     pos = {
-        x = 2,
-        y = 1
+        x = 1,
+        y = 2
     },
     display_size = {
         w = 71 * 1, 
         h = 95 * 1
     },
-    cost = 4,
+    cost = 5,
     rarity = 1,
     blueprint_compat = true,
     eternal_compat = true,
@@ -42,8 +42,8 @@ SMODS.Joker{ --Onion Pixie
                 func = function()
                     if G.GAME.blind.in_blind then
                         
-                        card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = "X"..tostring(0.75).." Blind Size", colour = G.C.GREEN})
-                        G.GAME.blind.chips = G.GAME.blind.chips * 0.75
+                        card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = "X"..tostring(0.65).." Blind Size", colour = G.C.GREEN})
+                        G.GAME.blind.chips = G.GAME.blind.chips * 0.65
                         G.GAME.blind.chip_text = number_format(G.GAME.blind.chips)
                         G.HUD_blind:recalculate()
                         return true

@@ -18,8 +18,8 @@ SMODS.Joker{ --Raffina
         }
     },
     pos = {
-        x = 0,
-        y = 2
+        x = 1,
+        y = 4
     },
     display_size = {
         w = 71 * 1, 

@@ -19,7 +19,7 @@ SMODS.Joker{ --Red Amitie
     },
     pos = {
         x = 6,
-        y = 5
+        y = 9
     },
     display_size = {
         w = 71 * 1, 
@@ -36,7 +36,7 @@ SMODS.Joker{ --Red Amitie
     pools = { ["puyotro_puyotro_jokers"] = true },
     soul_pos = {
         x = 7,
-        y = 5
+        y = 9
     },
     in_pool = function(self, args)
         return (

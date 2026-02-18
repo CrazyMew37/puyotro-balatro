@@ -1,10 +1,10 @@
 
 SMODS.Consumable {
-    key = 'panotty',
+    key = 'nasugrave',
     set = 'Tarot',
     pos = { x = 0, y = 0 },
     loc_txt = {
-        name = 'Panotty',
+        name = 'Nasu Grave',
         text = {
             [1] = 'Enhances {C:attention}2{} selected cards to',
             [2] = '{C:attention}Puyo Cards{}'

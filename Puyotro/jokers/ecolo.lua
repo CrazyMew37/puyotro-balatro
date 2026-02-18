@@ -23,8 +23,8 @@ SMODS.Joker{ --Ecolo
         }
     },
     pos = {
-        x = 9,
-        y = 3
+        x = 2,
+        y = 7
     },
     display_size = {
         w = 71 * 1, 

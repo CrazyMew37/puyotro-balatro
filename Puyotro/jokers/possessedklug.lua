@@ -21,8 +21,8 @@ SMODS.Joker{ --Possessed Klug
         }
     },
     pos = {
-        x = 7,
-        y = 3
+        x = 8,
+        y = 6
     },
     display_size = {
         w = 71 * 1, 

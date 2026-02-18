@@ -17,8 +17,8 @@ SMODS.Joker{ --Donguri Gaeru
         }
     },
     pos = {
-        x = 3,
-        y = 1
+        x = 2,
+        y = 2
     },
     display_size = {
         w = 71 * 1, 

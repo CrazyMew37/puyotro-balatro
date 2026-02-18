@@ -18,8 +18,8 @@ SMODS.Joker{ --Towa
         }
     },
     pos = {
-        x = 4,
-        y = 4
+        x = 7,
+        y = 7
     },
     display_size = {
         w = 71 * 1, 

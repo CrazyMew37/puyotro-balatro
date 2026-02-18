@@ -3,7 +3,7 @@ SMODS.Joker{ --Draco Centauros
     key = "dracocentauros",
     config = {
         extra = {
-            dollars0 = 5
+            dollars0 = 8
         }
     },
     loc_txt = {
@@ -11,7 +11,7 @@ SMODS.Joker{ --Draco Centauros
         ['text'] = {
             [1] = 'If the winning score is at',
             [2] = 'least {C:attention}twice{} the size of',
-            [3] = 'the {C:attention}blind{}, then earn {C:money}$5{}.'
+            [3] = 'the {C:attention}blind{}, then earn {C:money}$8{}'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
@@ -43,10 +43,10 @@ SMODS.Joker{ --Draco Centauros
                     func = function()
                         
                         local current_dollars = G.GAME.dollars
-                        local target_dollars = G.GAME.dollars + 5
+                        local target_dollars = G.GAME.dollars + 8
                         local dollar_value = target_dollars - current_dollars
                         ease_dollars(dollar_value)
-                        card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = "+"..tostring(5), colour = G.C.MONEY})
+                        card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = "+"..tostring(8), colour = G.C.MONEY})
                         return true
                     end
                 }

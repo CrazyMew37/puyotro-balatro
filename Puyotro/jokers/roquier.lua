@@ -13,15 +13,15 @@ SMODS.Joker{ --Roquier
             [1] = 'When finishing a round,',
             [2] = 'creates a number of {C:attention}Negative{}',
             [3] = '{C:planet}Planet Cards{} equal to the',
-            [4] = 'amount of {C:red}discards{} left.'
+            [4] = 'amount of {C:red}discards{} left'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
         }
     },
     pos = {
-        x = 1,
-        y = 4
+        x = 4,
+        y = 7
     },
     display_size = {
         w = 71 * 1, 

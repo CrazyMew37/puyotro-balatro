@@ -17,8 +17,8 @@ SMODS.Joker{ --Maguro Sasaki
         }
     },
     pos = {
-        x = 7,
-        y = 1
+        x = 8,
+        y = 2
     },
     display_size = {
         w = 71 * 1, 

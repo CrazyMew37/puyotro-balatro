@@ -17,8 +17,8 @@ SMODS.Joker{ --Risukuma
         }
     },
     pos = {
-        x = 6,
-        y = 1
+        x = 7,
+        y = 2
     },
     display_size = {
         w = 71 * 1, 

@@ -18,8 +18,8 @@ SMODS.Joker{ --Ocean Prince
         }
     },
     pos = {
-        x = 9,
-        y = 2
+        x = 0,
+        y = 5
     },
     display_size = {
         w = 71 * 1, 

@@ -12,15 +12,15 @@ SMODS.Joker{ --Atari
             [1] = 'When finishing a round,',
             [2] = 'creates a number of {C:attention}Negative{}',
             [3] = '{C:tarot}Tarot Cards{} equal to the',
-            [4] = 'amount of {C:blue}hands{} left.'
+            [4] = 'amount of {C:blue}hands{} left'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
         }
     },
     pos = {
-        x = 0,
-        y = 4
+        x = 3,
+        y = 7
     },
     display_size = {
         w = 71 * 1, 

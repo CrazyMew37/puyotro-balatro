@@ -18,8 +18,8 @@ SMODS.Joker{ --Popoi
         }
     },
     pos = {
-        x = 6,
-        y = 2
+        x = 7,
+        y = 4
     },
     display_size = {
         w = 71 * 1, 

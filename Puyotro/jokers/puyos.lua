@@ -9,9 +9,9 @@ SMODS.Joker{ --Puyos
     loc_txt = {
         ['name'] = 'Puyos',
         ['text'] = {
-            [1] = '{X:red,C:white}X#1# {} Mult',
-            [2] = 'Increases by {X:red,C:white}X0.1{}',
-            [3] = 'Mult every time this',
+            [1] = '{X:blue,C:white}X#1# {} Chips',
+            [2] = 'Increases by {X:blue,C:white}X0.1{}',
+            [3] = 'Chips every time this',
             [4] = 'card is triggered'
         },
         ['unlock'] = {
@@ -46,7 +46,7 @@ SMODS.Joker{ --Puyos
             local PuyoMult_value = card.ability.extra.PuyoMult
             card.ability.extra.PuyoMult = (card.ability.extra.PuyoMult) + 0.1
             return {
-                Xmult = PuyoMult_value
+                x_chips = PuyoMult_value
             }
         end
     end

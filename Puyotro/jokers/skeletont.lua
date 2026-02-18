@@ -17,8 +17,8 @@ SMODS.Joker{ --Skeleton T
         }
     },
     pos = {
-        x = 6,
-        y = 3
+        x = 0,
+        y = 6
     },
     display_size = {
         w = 71 * 1, 

@@ -22,8 +22,8 @@ SMODS.Joker{ --Masked Satan
         }
     },
     pos = {
-        x = 4,
-        y = 5
+        x = 0,
+        y = 9
     },
     display_size = {
         w = 71 * 1, 
@@ -39,8 +39,8 @@ SMODS.Joker{ --Masked Satan
     atlas = 'CustomJokers',
     pools = { ["puyotro_puyotro_jokers"] = true },
     soul_pos = {
-        x = 5,
-        y = 5
+        x = 1,
+        y = 9
     },
     in_pool = function(self, args)
         return (

@@ -11,7 +11,7 @@ SMODS.Joker{ --Satan
         ['text'] = {
             [1] = 'When a card is {C:attention}destroyed{},',
             [2] = '{C:attention}level up{} a random {C:attention}poker{}',
-            [3] = '{C:attention}hand{}.'
+            [3] = '{C:attention}hand{}'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'

@@ -21,8 +21,8 @@ SMODS.Joker{ --Puubot
         }
     },
     pos = {
-        x = 3,
-        y = 4
+        x = 6,
+        y = 7
     },
     display_size = {
         w = 71 * 1, 

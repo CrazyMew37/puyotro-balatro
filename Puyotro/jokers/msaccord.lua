@@ -18,8 +18,8 @@ SMODS.Joker{ --Ms. Accord
         }
     },
     pos = {
-        x = 5,
-        y = 2
+        x = 6,
+        y = 4
     },
     display_size = {
         w = 71 * 1, 

@@ -20,8 +20,8 @@ SMODS.Joker{ --Hachi
         }
     },
     pos = {
-        x = 3,
-        y = 3
+        x = 7,
+        y = 5
     },
     display_size = {
         w = 71 * 1, 

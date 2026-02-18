@@ -17,8 +17,8 @@ SMODS.Joker{ --Ringo Ando
         }
     },
     pos = {
-        x = 5,
-        y = 1
+        x = 6,
+        y = 2
     },
     display_size = {
         w = 71 * 1, 

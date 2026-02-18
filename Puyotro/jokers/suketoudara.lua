@@ -3,10 +3,9 @@ SMODS.Joker{ --Suketoudara
     key = "suketoudara",
     config = {
         extra = {
-            hands0 = 1,
-            discards0 = 2,
-            hand_size0 = 1,
-            hand_size = 1
+            hands_change = '1',
+            discards_change = '2',
+            hand_size_increase = '1'
         }
     },
     loc_txt = {
@@ -39,47 +38,17 @@ SMODS.Joker{ --Suketoudara
     pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true },
     
     calculate = function(self, card, context)
-        if context.setting_blind  then
-            return {
-                
-                func = function()
-                    card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = "+"..tostring(1).." Hands", colour = G.C.GREEN})
-                    
-                    G.GAME.current_round.hands_left = G.GAME.current_round.hands_left + 1
-                    return true
-                end,
-                extra = {
-                    
-                    func = function()
-                        card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = "-"..tostring(2).." Discards", colour = G.C.RED})
-                        G.GAME.current_round.discards_left = G.GAME.current_round.discards_left - 2
-                        return true
-                    end,
-                    colour = G.C.GREEN
-                }
-            }
-        end
-        if context.buying_card and context.card.config.center.key == self.key and context.cardarea == G.jokers  then
-            return {
-                
-                func = function()
-                    card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = "+"..tostring(1).." Hand Limit", colour = G.C.BLUE})
-                    
-                    G.hand:change_size(1)
-                    return true
-                end
-            }
-        end
-        if context.selling_self  then
-            return {
-                
-                func = function()
-                    card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = "-"..tostring(1).." Hand Limit", colour = G.C.BLUE})
-                    
-                    G.hand:change_size(-1)
-                    return true
-                end
-            }
-        end
+    end,
+    
+    add_to_deck = function(self, card, from_debuff)
+        G.GAME.round_resets.hands = G.GAME.round_resets.hands + 1
+        G.GAME.round_resets.discards = math.max(1, G.GAME.round_resets.discards - 2)
+        G.hand:change_size(1)
+    end,
+    
+    remove_from_deck = function(self, card, from_debuff)
+        G.GAME.round_resets.hands = G.GAME.round_resets.hands - 1
+        G.GAME.round_resets.discards = G.GAME.round_resets.discards + 2
+        G.hand:change_size(-1)
     end
 }

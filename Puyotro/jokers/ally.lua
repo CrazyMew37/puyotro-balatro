@@ -21,8 +21,8 @@ SMODS.Joker{ --Ally
         }
     },
     pos = {
-        x = 8,
-        y = 5
+        x = 2,
+        y = 10
     },
     display_size = {
         w = 71 * 1, 
@@ -38,8 +38,8 @@ SMODS.Joker{ --Ally
     atlas = 'CustomJokers',
     pools = { ["puyotro_mycustom_jokers"] = true },
     soul_pos = {
-        x = 9,
-        y = 5
+        x = 3,
+        y = 10
     },
     in_pool = function(self, args)
         return (

@@ -18,8 +18,8 @@ SMODS.Joker{ --Lidelle
         }
     },
     pos = {
-        x = 2,
-        y = 2
+        x = 3,
+        y = 4
     },
     display_size = {
         w = 71 * 1, 
