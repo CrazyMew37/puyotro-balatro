@@ -3,13 +3,13 @@ SMODS.Joker{ --Akuma
     key = "akuma",
     config = {
         extra = {
-            chips0 = 25
+            AkumaChips = 25
         }
     },
     loc_txt = {
         ['name'] = 'Akuma',
         ['text'] = {
-            [1] = '{C:blue}+25{} Chips for every',
+            [1] = '{C:blue}+#1#{} Chips for every',
             [2] = 'scored card with an',
             [3] = '{C:attention}enhancement{}'
         },
@@ -35,6 +35,11 @@ SMODS.Joker{ --Akuma
     atlas = 'CustomJokers',
     pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true },
     
+    loc_vars = function(self, info_queue, card)
+        
+        return {vars = {card.ability.extra.AkumaChips}}
+    end,
+    
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play  then
             if (function()
@@ -47,7 +52,7 @@ SMODS.Joker{ --Akuma
                 return false
             end)() then
                 return {
-                    chips = 25
+                    chips = card.ability.extra.AkumaChips
                 }
             end
         end

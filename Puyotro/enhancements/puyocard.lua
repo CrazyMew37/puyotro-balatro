@@ -4,13 +4,14 @@ SMODS.Enhancement {
     pos = { x = 0, y = 0 },
     config = {
         extra = {
-            PuyoChipAmount = 10
+            PuyoChipAmount = 10,
+            PuyoChipIncrease = 10
         }
     },
     loc_txt = {
         name = 'Puyo Card',
         text = {
-            [1] = '{C:blue}+10{} Extra Chips every time',
+            [1] = '{C:blue}+#2#{} Extra Chips every time',
             [2] = 'this card is scored',
             [3] = '{C:inactive}(Currently{} {C:blue}+#1# {}{C:inactive}Chips){}'
         }
@@ -26,12 +27,12 @@ SMODS.Enhancement {
     no_collection = false,
     weight = 5,
     loc_vars = function(self, info_queue, card)
-        return {vars = {card.ability.extra.PuyoChipAmount}}
+        return {vars = {card.ability.extra.PuyoChipAmount, card.ability.extra.PuyoChipIncrease}}
     end,
     calculate = function(self, card, context)
         if context.main_scoring and context.cardarea == G.play then
             local PuyoChipAmount_value = card.ability.extra.PuyoChipAmount
-            card.ability.extra.PuyoChipAmount = (card.ability.extra.PuyoChipAmount) + 10
+            card.ability.extra.PuyoChipAmount = (card.ability.extra.PuyoChipAmount) + card.ability.extra.PuyoChipIncrease
             return {
                 chips = PuyoChipAmount_value,
                 extra = {

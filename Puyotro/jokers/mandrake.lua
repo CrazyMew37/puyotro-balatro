@@ -3,7 +3,7 @@ SMODS.Joker{ --Mandrake
     key = "mandrake",
     config = {
         extra = {
-            xchips0 = 1.15
+            MandrakeMult = 1.15
         }
     },
     loc_txt = {
@@ -12,7 +12,7 @@ SMODS.Joker{ --Mandrake
             [1] = '{C:attention}Wild Cards{} are given',
             [2] = '{C:attention}Polychrome.{} Scoring {C:attention}Wild{}',
             [3] = '{C:attention}Polychrome Cards{} gain an',
-            [4] = 'additional {X:chips,C:white}x1.15{} Chips'
+            [4] = 'additional {X:chips,C:white}x#1#{} Chips'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
@@ -36,6 +36,11 @@ SMODS.Joker{ --Mandrake
     atlas = 'CustomJokers',
     pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true },
     
+    loc_vars = function(self, info_queue, card)
+        
+        return {vars = {card.ability.extra.MandrakeMult}}
+    end,
+    
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play  then
             if (SMODS.get_enhancements(context.other_card)["m_wild"] == true and not (context.other_card.edition and context.other_card.edition.key == "polychrome")) then
@@ -50,7 +55,7 @@ SMODS.Joker{ --Mandrake
                 }))
             elseif (SMODS.get_enhancements(context.other_card)["m_wild"] == true and context.other_card.edition and context.other_card.edition.key == "polychrome") then
                 return {
-                    x_chips = 1.15
+                    x_chips = card.ability.extra.MandrakeMult
                 }
             end
         end

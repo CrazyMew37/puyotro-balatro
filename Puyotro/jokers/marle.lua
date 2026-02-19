@@ -3,13 +3,13 @@ SMODS.Joker{ --Marle
     key = "marle",
     config = {
         extra = {
-            echips0 = 4
+            MarleAmount = 4
         }
     },
     loc_txt = {
         ['name'] = 'Marle',
         ['text'] = {
-            [1] = '{X:enhanced,C:white}^4{} Chips if played hand',
+            [1] = '{X:enhanced,C:white}^#1#{} Chips if played hand',
             [2] = 'is a {C:attention}High Card{}'
         },
         ['unlock'] = {
@@ -46,11 +46,16 @@ SMODS.Joker{ --Marle
         and true
     end,
     
+    loc_vars = function(self, info_queue, card)
+        
+        return {vars = {card.ability.extra.MarleAmount}}
+    end,
+    
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main  then
             if context.scoring_name == "High Card" then
                 return {
-                    e_chips = 4
+                    e_chips = card.ability.extra.MarleAmount
                 }
             end
         end

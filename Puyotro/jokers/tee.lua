@@ -3,13 +3,13 @@ SMODS.Joker{ --Tee
     key = "tee",
     config = {
         extra = {
-            xchips0 = 3
+            TetrisMult = 3
         }
     },
     loc_txt = {
         ['name'] = 'Tee',
         ['text'] = {
-            [1] = '{X:blue,C:white}X3{} Chips if played hand',
+            [1] = '{X:blue,C:white}X#1#{} Chips if played hand',
             [2] = 'contains a {C:attention}Three of a Kind{}'
         },
         ['unlock'] = {
@@ -34,11 +34,16 @@ SMODS.Joker{ --Tee
     atlas = 'CustomJokers',
     pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true },
     
+    loc_vars = function(self, info_queue, card)
+        
+        return {vars = {card.ability.extra.TetrisMult}}
+    end,
+    
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main  then
             if next(context.poker_hands["Three of a Kind"]) then
                 return {
-                    x_chips = 3
+                    x_chips = card.ability.extra.TetrisMult
                 }
             end
         end

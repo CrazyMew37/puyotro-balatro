@@ -3,13 +3,14 @@ SMODS.Joker{ --Mummy
     key = "mummy",
     config = {
         extra = {
-            MummyMult = 0
+            MummyMult = 0,
+            MummyGain = 3
         }
     },
     loc_txt = {
         ['name'] = 'Mummy',
         ['text'] = {
-            [1] = 'Gains {C:red}+3{} Mult when',
+            [1] = 'Gains {C:red}+#2#{} Mult when',
             [2] = 'a card is {C:attention}destroyed{}',
             [3] = '{C:inactive}(Currently{} {C:red}+#1# {}{C:inactive}Mult){}'
         },
@@ -37,14 +38,14 @@ SMODS.Joker{ --Mummy
     
     loc_vars = function(self, info_queue, card)
         
-        return {vars = {card.ability.extra.MummyMult}}
+        return {vars = {card.ability.extra.MummyMult, card.ability.extra.MummyGain}}
     end,
     
     calculate = function(self, card, context)
         if context.remove_playing_cards  then
             return {
                 func = function()
-                    card.ability.extra.MummyMult = (card.ability.extra.MummyMult) + 3
+                    card.ability.extra.MummyMult = (card.ability.extra.MummyMult) + card.ability.extra.MummyGain
                     return true
                 end,
                 message = "Upgrade!"

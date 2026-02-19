@@ -3,14 +3,15 @@ SMODS.Joker{ --Rafisol
     key = "rafisol",
     config = {
         extra = {
-            rafisolmult = 1
+            rafisolmult = 1,
+            RafisolIncrease = 1
         }
     },
     loc_txt = {
         ['name'] = 'Rafisol',
         ['text'] = {
             [1] = 'Played {C:hearts}Hearts{} are destroyed',
-            [2] = 'Gains {X:mult,C:white}X1{} Mult for',
+            [2] = 'Gains {X:mult,C:white}X#2#{} Mult for',
             [3] = 'every destroyed {C:hearts}Hearts{}',
             [4] = '{C:inactive}(Currently{} {X:mult,C:white}X#1# {} {C:inactive}Mult){}'
         },
@@ -50,7 +51,7 @@ SMODS.Joker{ --Rafisol
     
     loc_vars = function(self, info_queue, card)
         
-        return {vars = {card.ability.extra.rafisolmult}}
+        return {vars = {card.ability.extra.rafisolmult, card.ability.extra.RafisolIncrease}}
     end,
     
     calculate = function(self, card, context)
@@ -61,7 +62,7 @@ SMODS.Joker{ --Rafisol
             context.other_card.should_destroy = false
             if context.other_card:is_suit("Hearts") then
                 context.other_card.should_destroy = true
-                card.ability.extra.rafisolmult = (card.ability.extra.rafisolmult) + 1
+                card.ability.extra.rafisolmult = (card.ability.extra.rafisolmult) + card.ability.extra.RafisolIncrease
                 return {
                     message = "Upgrade!",
                     extra = {

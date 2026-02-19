@@ -3,13 +3,13 @@ SMODS.Joker{ --Ally
     key = "ally",
     config = {
         extra = {
-            xmult0 = 2
+            AllyMult = 2
         }
     },
     loc_txt = {
         ['name'] = 'Ally',
         ['text'] = {
-            [1] = '{X:mult,C:white}X2{} Mult for every',
+            [1] = '{X:mult,C:white}X#1#{} Mult for every',
             [2] = 'scored {C:hearts}Heart{} Card',
             [3] = 'Non-Heart Cards are',
             [4] = 'converted into {C:hearts}Hearts{}',
@@ -50,11 +50,16 @@ SMODS.Joker{ --Ally
         and true
     end,
     
+    loc_vars = function(self, info_queue, card)
+        
+        return {vars = {card.ability.extra.AllyMult}}
+    end,
+    
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play  then
             if context.other_card:is_suit("Hearts") then
                 return {
-                    Xmult = 2
+                    Xmult = card.ability.extra.AllyMult
                 }
             elseif not (context.other_card:is_suit("Hearts")) then
                 local scored_card = context.other_card

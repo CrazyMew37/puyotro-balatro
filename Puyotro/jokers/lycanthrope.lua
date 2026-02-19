@@ -3,14 +3,13 @@ SMODS.Joker{ --Lycanthrope
     key = "lycanthrope",
     config = {
         extra = {
-            JaanMult = 0,
-            xchips0 = 3
+            LycanChips = 3
         }
     },
     loc_txt = {
         ['name'] = 'Lycanthrope',
         ['text'] = {
-            [1] = '{X:chips,C:white}X3{} Chips on the',
+            [1] = '{X:chips,C:white}X#1#{} Chips on the',
             [2] = 'final hand of the round'
         },
         ['unlock'] = {
@@ -37,14 +36,14 @@ SMODS.Joker{ --Lycanthrope
     
     loc_vars = function(self, info_queue, card)
         
-        return {vars = {card.ability.extra.JaanMult}}
+        return {vars = {card.ability.extra.LycanChips}}
     end,
     
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main  then
             if to_big(G.GAME.current_round.hands_left) > to_big(0) then
                 return {
-                    x_chips = 3
+                    x_chips = card.ability.extra.LycanChips
                 }
             end
         end

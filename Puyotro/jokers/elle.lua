@@ -3,13 +3,13 @@ SMODS.Joker{ --Elle
     key = "elle",
     config = {
         extra = {
-            xchips0 = 2.5
+            TetrisMult = 2.5
         }
     },
     loc_txt = {
         ['name'] = 'Elle',
         ['text'] = {
-            [1] = '{X:blue,C:white}X2.5{} Chips if played hand',
+            [1] = '{X:blue,C:white}X#1#{} Chips if played hand',
             [2] = 'contains a {C:attention}Two Pair{}'
         },
         ['unlock'] = {
@@ -34,11 +34,16 @@ SMODS.Joker{ --Elle
     atlas = 'CustomJokers',
     pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true },
     
+    loc_vars = function(self, info_queue, card)
+        
+        return {vars = {card.ability.extra.TetrisMult}}
+    end,
+    
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main  then
             if next(context.poker_hands["Two Pair"]) then
                 return {
-                    x_chips = 2.5
+                    x_chips = card.ability.extra.TetrisMult
                 }
             end
         end

@@ -3,13 +3,13 @@ SMODS.Joker{ --Frankensteins
     key = "frankensteins",
     config = {
         extra = {
-            xmult0 = 2
+            FrankMult = 2
         }
     },
     loc_txt = {
         ['name'] = 'Frankensteins',
         ['text'] = {
-            [1] = '{X:red,C:white}X2{} Mult if played hand',
+            [1] = '{X:red,C:white}X#1#{} Mult if played hand',
             [2] = 'has scoring {C:spades}Spades{} and {C:clubs}Clubs{}'
         },
         ['unlock'] = {
@@ -34,6 +34,11 @@ SMODS.Joker{ --Frankensteins
     atlas = 'CustomJokers',
     pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true },
     
+    loc_vars = function(self, info_queue, card)
+        
+        return {vars = {card.ability.extra.FrankMult}}
+    end,
+    
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main  then
             if ((function()
@@ -54,7 +59,7 @@ SMODS.Joker{ --Frankensteins
                 return count >= 1
             end)()) then
                 return {
-                    Xmult = 2
+                    Xmult = card.ability.extra.FrankMult
                 }
             end
         end

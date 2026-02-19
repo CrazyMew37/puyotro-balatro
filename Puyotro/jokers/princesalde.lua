@@ -3,16 +3,16 @@ SMODS.Joker{ --Prince Salde
     key = "princesalde",
     config = {
         extra = {
-            xmult0 = 2,
+            SaldeMult = 2,
             odds = 20
         }
     },
     loc_txt = {
         ['name'] = 'Prince Salde',
         ['text'] = {
-            [1] = '{X:red,C:white}X2{} Mult for every scored',
+            [1] = '{X:red,C:white}X#1#{} Mult for every scored',
             [2] = 'card with a {C:green}Fever Seal{}',
-            [3] = '{C:green}#1# in #2# {}Chance to give a',
+            [3] = '{C:green}#2# in #3# {}Chance to give a',
             [4] = 'scored card a {C:green}Fever Seal{}'
         },
         ['unlock'] = {
@@ -40,14 +40,14 @@ SMODS.Joker{ --Prince Salde
     loc_vars = function(self, info_queue, card)
         
         local new_numerator, new_denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'j_puyotro_princesalde') 
-        return {vars = {new_numerator, new_denominator}}
+        return {vars = {card.ability.extra.SaldeMult, new_numerator, new_denominator}}
     end,
     
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play  then
             if context.other_card.seal == "Puyotro_feverseal" then
                 return {
-                    Xmult = 2
+                    Xmult = card.ability.extra.SaldeMult
                 }
             elseif true then
                 if SMODS.pseudorandom_probability(card, 'group_0_080c1077', 1, card.ability.extra.odds, 'j_puyotro_princesalde', false) then

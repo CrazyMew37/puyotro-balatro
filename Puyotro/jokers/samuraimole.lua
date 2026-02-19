@@ -3,15 +3,15 @@ SMODS.Joker{ --Samurai Mole
     key = "samuraimole",
     config = {
         extra = {
-            hand_size_increase = '2',
-            mult0 = 15
+            MoleMult = 15,
+            MoleHandSize = 2
         }
     },
     loc_txt = {
         ['name'] = 'Samurai Mole',
         ['text'] = {
-            [1] = '{C:red}+15{} Mult',
-            [2] = '{C:attention}-2{} Hand Size'
+            [1] = '{C:red}+#1#{} Mult',
+            [2] = '{C:attention}-#2#{} Hand Size'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
@@ -35,19 +35,24 @@ SMODS.Joker{ --Samurai Mole
     atlas = 'CustomJokers',
     pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true },
     
+    loc_vars = function(self, info_queue, card)
+        
+        return {vars = {card.ability.extra.MoleMult, card.ability.extra.MoleHandSize}}
+    end,
+    
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main  then
             return {
-                mult = 15
+                mult = card.ability.extra.MoleMult
             }
         end
     end,
     
     add_to_deck = function(self, card, from_debuff)
-        G.hand:change_size(-2)
+        G.hand:change_size(-card.ability.extra.MoleHandSize)
     end,
     
     remove_from_deck = function(self, card, from_debuff)
-        G.hand:change_size(2)
+        G.hand:change_size(card.ability.extra.MoleHandSize)
     end
 }

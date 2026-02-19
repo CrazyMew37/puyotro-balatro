@@ -3,13 +3,13 @@ SMODS.Joker{ --Ai
     key = "ai",
     config = {
         extra = {
-            xchips0 = 4
+            TetrisMult = 4
         }
     },
     loc_txt = {
         ['name'] = 'Ai',
         ['text'] = {
-            [1] = '{X:blue,C:white}X4{} Chips if played hand',
+            [1] = '{X:blue,C:white}X#1#{} Chips if played hand',
             [2] = 'contains a {C:attention}Four of a Kind{}'
         },
         ['unlock'] = {
@@ -34,11 +34,16 @@ SMODS.Joker{ --Ai
     atlas = 'CustomJokers',
     pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true },
     
+    loc_vars = function(self, info_queue, card)
+        
+        return {vars = {card.ability.extra.TetrisMult}}
+    end,
+    
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main  then
             if next(context.poker_hands["Four of a Kind"]) then
                 return {
-                    x_chips = 4
+                    x_chips = card.ability.extra.TetrisMult
                 }
             end
         end

@@ -3,14 +3,14 @@ SMODS.Joker{ --Squares
     key = "squares",
     config = {
         extra = {
-            handsplayedthisround = 0,
-            echips0 = 2
+            SquaresAmount = 2,
+            handsplayedthisround = 0
         }
     },
     loc_txt = {
         ['name'] = 'Squares',
         ['text'] = {
-            [1] = '{X:enhanced,C:white}^2{} Chips if played hand',
+            [1] = '{X:enhanced,C:white}^#1#{} Chips if played hand',
             [2] = 'is a {C:attention}Five of a Kind{},',
             [3] = '{C:attention}Flush House{}, or {C:attention}Flush Five{}',
             [4] = 'Makes {C:attention}3{} copies of the',
@@ -53,14 +53,14 @@ SMODS.Joker{ --Squares
     
     loc_vars = function(self, info_queue, card)
         
-        return {vars = {(G.GAME.current_round.hands_played or 0)}}
+        return {vars = {card.ability.extra.SquaresAmount, (G.GAME.current_round.hands_played or 0)}}
     end,
     
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main  then
             if (context.scoring_name == "Five of a Kind" or context.scoring_name == "Flush House" or context.scoring_name == "Flush Five") then
                 return {
-                    e_chips = 2
+                    e_chips = card.ability.extra.SquaresAmount
                 }
             end
         end

@@ -5,14 +5,17 @@ SMODS.Joker{ --Yellow Satan
         extra = {
             SatanChips = 1,
             SatanMult = 1,
-            SatanMoney = 0
+            SatanMoney = 0,
+            SatanChipIncrease = 0.2,
+            SatanMultIncrease = 0.2,
+            SatanMoneyIncrease = 1
         }
     },
     loc_txt = {
         ['name'] = 'Yellow Satan',
         ['text'] = {
-            [1] = 'Gains {C:blue}X0.2{} Chips, {X:red,C:white}X0.2{} Mult,',
-            [2] = 'and {C:money}$1{} Payout for every',
+            [1] = 'Gains {C:blue}X#4#{} Chips, {X:red,C:white}X#5#{} Mult,',
+            [2] = 'and {C:money}$#6#{} Payout for every',
             [3] = '{C:attention}destroyed{} card',
             [4] = '(Currently {X:blue,C:white}X#1# {} Chips, {X:red,C:white}X#2# {} Mult,',
             [5] = 'and {C:money}$#3# {}Payout)'
@@ -41,27 +44,27 @@ SMODS.Joker{ --Yellow Satan
     
     loc_vars = function(self, info_queue, card)
         
-        return {vars = {card.ability.extra.SatanChips, card.ability.extra.SatanMult, card.ability.extra.SatanMoney}}
+        return {vars = {card.ability.extra.SatanChips, card.ability.extra.SatanMult, card.ability.extra.SatanMoney, card.ability.extra.SatanChipIncrease, card.ability.extra.SatanMultIncrease, card.ability.extra.SatanMoneyIncrease}}
     end,
     
     calculate = function(self, card, context)
         if context.remove_playing_cards  then
             return {
                 func = function()
-                    card.ability.extra.SatanChips = (card.ability.extra.SatanChips) + 0.2
+                    card.ability.extra.SatanChips = (card.ability.extra.SatanChips) + card.ability.extra.SatanChipIncrease
                     return true
                 end,
                 message = "Upgrade! (Chips)",
                 extra = {
                     func = function()
-                        card.ability.extra.SatanMult = (card.ability.extra.SatanMult) + 0.2
+                        card.ability.extra.SatanMult = (card.ability.extra.SatanMult) + card.ability.extra.SatanMultIncrease
                         return true
                     end,
                     message = "Upgrade! (Mult)",
                     colour = G.C.GREEN,
                     extra = {
                         func = function()
-                            card.ability.extra.SatanMoney = (card.ability.extra.SatanMoney) + 1
+                            card.ability.extra.SatanMoney = (card.ability.extra.SatanMoney) + card.ability.extra.SatanMoneyIncrease
                             return true
                         end,
                         message = "Upgrade! (Payout)",

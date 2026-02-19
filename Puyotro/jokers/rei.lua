@@ -3,15 +3,15 @@ SMODS.Joker{ --Rei
     key = "rei",
     config = {
         extra = {
-            xmult0 = 0.5,
-            xmult = 2.5
+            ReiDecrease = 0.5,
+            ReiMult = 2.5
         }
     },
     loc_txt = {
         ['name'] = 'Rei',
         ['text'] = {
-            [1] = '{X:red,C:white}X0.5{} Mult on the First Hand',
-            [2] = '{X:red,C:white}X2.5{} Mult on Subsequent Hands'
+            [1] = '{X:red,C:white}X#1#{} Mult on the First Hand',
+            [2] = '{X:red,C:white}X#2#{} Mult on Subsequent Hands'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
@@ -35,15 +35,20 @@ SMODS.Joker{ --Rei
     atlas = 'CustomJokers',
     pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true },
     
+    loc_vars = function(self, info_queue, card)
+        
+        return {vars = {card.ability.extra.ReiDecrease, card.ability.extra.ReiMult}}
+    end,
+    
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main  then
             if G.GAME.current_round.hands_played == 0 then
                 return {
-                    Xmult = 0.5
+                    Xmult = card.ability.extra.ReiDecrease
                 }
             elseif not (G.GAME.current_round.hands_played == 0) then
                 return {
-                    Xmult = 2.5
+                    Xmult = card.ability.extra.ReiMult
                 }
             end
         end

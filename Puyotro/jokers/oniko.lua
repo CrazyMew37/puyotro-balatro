@@ -3,9 +3,9 @@ SMODS.Joker{ --Oniko
     key = "oniko",
     config = {
         extra = {
-            blind_size0 = 0.8,
-            chips0 = -30,
-            mult0 = -6
+            OnikoChips = -30,
+            OnikoMult = -6,
+            blind_size0 = 0.8
         }
     },
     loc_txt = {
@@ -13,7 +13,7 @@ SMODS.Joker{ --Oniko
         ['text'] = {
             [1] = 'Reduces Blind',
             [2] = 'Requirements by {C:attention}20%{}',
-            [3] = '{C:blue}-30{} Chips, {C:red}-6{} Mult'
+            [3] = '{C:blue}#1#{} Chips, {C:red}#2#{} Mult'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
@@ -37,6 +37,11 @@ SMODS.Joker{ --Oniko
     atlas = 'CustomJokers',
     pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true },
     
+    loc_vars = function(self, info_queue, card)
+        
+        return {vars = {card.ability.extra.OnikoChips, card.ability.extra.OnikoMult}}
+    end,
+    
     calculate = function(self, card, context)
         if context.setting_blind  then
             return {
@@ -55,9 +60,9 @@ SMODS.Joker{ --Oniko
         end
         if context.cardarea == G.jokers and context.joker_main  then
             return {
-                chips = -30,
+                chips = card.ability.extra.OnikoChips,
                 extra = {
-                    mult = -6
+                    mult = card.ability.extra.OnikoMult
                 }
             }
         end

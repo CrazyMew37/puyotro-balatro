@@ -4,17 +4,15 @@ SMODS.Joker{ --Harpy
     config = {
         extra = {
             HarpySwitch = 0,
-            xchips0 = 1.5,
-            xmult0 = 0.75,
-            xchips = 0.75,
-            xmult = 1.5
+            HarpyUp = 1.5,
+            HarpyDown = 0.75
         }
     },
     loc_txt = {
         ['name'] = 'Harpy',
         ['text'] = {
-            [1] = 'Swaps between {X:chips,C:white}X1.5{} Chips, {X:mult,C:white}X0.75{}',
-            [2] = 'Mult and {X:blue,C:white}X0.75{} Chips, {X:mult,C:white}X1.5{} Mult'
+            [1] = 'Swaps between {X:chips,C:white}X#2# {} Chips, {X:mult,C:white}X#3# {}',
+            [2] = 'Mult and {X:blue,C:white}X#3# {} Chips, {X:mult,C:white}X#2# {} Mult'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
@@ -40,7 +38,7 @@ SMODS.Joker{ --Harpy
     
     loc_vars = function(self, info_queue, card)
         
-        return {vars = {card.ability.extra.HarpySwitch}}
+        return {vars = {card.ability.extra.HarpySwitch, card.ability.extra.HarpyUp, card.ability.extra.HarpyDown}}
     end,
     
     calculate = function(self, card, context)
@@ -48,17 +46,17 @@ SMODS.Joker{ --Harpy
             if to_big((card.ability.extra.HarpySwitch or 0)) == to_big(0) then
                 card.ability.extra.HarpySwitch = 1
                 return {
-                    x_chips = 1.5,
+                    x_chips = card.ability.extra.HarpyUp,
                     extra = {
-                        Xmult = 0.75
+                        Xmult = card.ability.extra.HarpyDown
                     }
                 }
             elseif to_big((card.ability.extra.HarpySwitch or 0)) == to_big(1) then
                 card.ability.extra.HarpySwitch = 0
                 return {
-                    x_chips = 0.75,
+                    x_chips = card.ability.extra.HarpyDown,
                     extra = {
-                        Xmult = 1.5
+                        Xmult = card.ability.extra.HarpyUp
                     }
                 }
             end

@@ -4,6 +4,7 @@ SMODS.Joker{ --Doppelganger Arle
     config = {
         extra = {
             ArleMult = 4,
+            ArleIncrease = 2,
             odds = 25,
             odds2 = 1000
         }
@@ -14,7 +15,7 @@ SMODS.Joker{ --Doppelganger Arle
             [1] = '{C:red}+#1# {}Mult...?',
             [2] = 'Every time this card is',
             [3] = 'triggered, increases by',
-            [4] = '{C:red}+2{} Mult...?'
+            [4] = '{C:red}+#2#{} Mult...?'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
@@ -42,14 +43,14 @@ SMODS.Joker{ --Doppelganger Arle
         
         local new_numerator, new_denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'j_puyotro_doppelgangerarle')
         local new_numerator2, new_denominator2 = SMODS.get_probability_vars(card, 1, card.ability.extra.odds2, 'j_puyotro_doppelgangerarle')
-        return {vars = {card.ability.extra.ArleMult, new_numerator, new_denominator, new_numerator2, new_denominator2}}
+        return {vars = {card.ability.extra.ArleMult, card.ability.extra.ArleIncrease, new_numerator, new_denominator, new_numerator2, new_denominator2}}
     end,
     
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main  then
             if true then
                 local ArleMult_value = card.ability.extra.ArleMult
-                card.ability.extra.ArleMult = (card.ability.extra.ArleMult) + 2
+                card.ability.extra.ArleMult = (card.ability.extra.ArleMult) + card.ability.extra.ArleIncrease
                 return {
                     mult = ArleMult_value,
                     extra = {

@@ -3,15 +3,15 @@ SMODS.Joker{ --Dark Sig
     key = "darksig",
     config = {
         extra = {
-            odds = 4,
-            xchips0 = 1.24
+            DarkSigMult = 1.24,
+            odds = 4
         }
     },
     loc_txt = {
         ['name'] = 'Dark Sig',
         ['text'] = {
-            [1] = '{C:green}#1# in #2# {}chance for each',
-            [2] = 'card to score {X:blue,C:white}X1.24{} Chips'
+            [1] = '{C:green}#2# in #3# {}chance for each',
+            [2] = 'card to score {X:blue,C:white}X#1#{} Chips'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
@@ -38,14 +38,14 @@ SMODS.Joker{ --Dark Sig
     loc_vars = function(self, info_queue, card)
         
         local new_numerator, new_denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'j_puyotro_darksig') 
-        return {vars = {new_numerator, new_denominator}}
+        return {vars = {card.ability.extra.DarkSigMult, new_numerator, new_denominator}}
     end,
     
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play  then
             if true then
                 if SMODS.pseudorandom_probability(card, 'group_0_dec85cae', 1, card.ability.extra.odds, 'j_puyotro_darksig', false) then
-                    SMODS.calculate_effect({x_chips = 1.24}, card)
+                    SMODS.calculate_effect({x_chips = card.ability.extra.DarkSigMult}, card)
                 end
             end
         end

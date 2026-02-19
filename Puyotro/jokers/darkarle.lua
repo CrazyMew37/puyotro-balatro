@@ -4,15 +4,17 @@ SMODS.Joker{ --Dark Arle
     config = {
         extra = {
             ArleMult = 4,
-            ArleChips = -7
+            ArleChips = -7,
+            ArleMultIncrease = 4,
+            ArleChipDecrease = -7
         }
     },
     loc_txt = {
         ['name'] = 'Dark Arle',
         ['text'] = {
             [1] = '{C:red}+#1# {}Mult, {C:blue}#2# {}Chips',
-            [2] = 'Increases by {C:red}+4{} Mult and',
-            [3] = 'decreases by {C:blue}-7{} Chips',
+            [2] = 'Increases by {C:red}+#3#{} Mult and',
+            [3] = 'decreases by {C:blue}#4#{} Chips',
             [4] = 'every time this card is',
             [5] = 'triggered'
         },
@@ -40,15 +42,15 @@ SMODS.Joker{ --Dark Arle
     
     loc_vars = function(self, info_queue, card)
         
-        return {vars = {card.ability.extra.ArleMult, card.ability.extra.ArleChips}}
+        return {vars = {card.ability.extra.ArleMult, card.ability.extra.ArleChips, card.ability.extra.ArleMultIncrease, card.ability.extra.ArleChipDecrease}}
     end,
     
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main  then
             local ArleMult_value = card.ability.extra.ArleMult
             local ArleChips_value = card.ability.extra.ArleChips
-            card.ability.extra.ArleMult = (card.ability.extra.ArleMult) + 4
-            card.ability.extra.ArleChips = (card.ability.extra.ArleChips) + -7
+            card.ability.extra.ArleMult = (card.ability.extra.ArleMult) + card.ability.extra.ArleMultIncrease
+            card.ability.extra.ArleChips = (card.ability.extra.ArleChips) + card.ability.extra.ArleChipDecrease
             return {
                 mult = ArleMult_value,
                 extra = {

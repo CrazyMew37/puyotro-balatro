@@ -3,13 +3,14 @@ SMODS.Joker{ --Banshee Trio
     key = "bansheetrio",
     config = {
         extra = {
-            BansheeMult = 0
+            BansheeMult = 0,
+            BansheeIncrease = 1
         }
     },
     loc_txt = {
         ['name'] = 'Banshee Trio',
         ['text'] = {
-            [1] = 'Gains {C:red}+1{} Mult for',
+            [1] = 'Gains {C:red}+#2#{} Mult for',
             [2] = 'every scored {C:attention}3{}',
             [3] = '{C:inactive}(Currently{} {C:red}+#1# {}{C:inactive}Mult){}'
         },
@@ -37,13 +38,13 @@ SMODS.Joker{ --Banshee Trio
     
     loc_vars = function(self, info_queue, card)
         
-        return {vars = {card.ability.extra.BansheeMult}}
+        return {vars = {card.ability.extra.BansheeMult, card.ability.extra.BansheeIncrease}}
     end,
     
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play  then
             if context.other_card:get_id() == 3 then
-                card.ability.extra.BansheeMult = (card.ability.extra.BansheeMult) + 1
+                card.ability.extra.BansheeMult = (card.ability.extra.BansheeMult) + card.ability.extra.BansheeIncrease
             end
         end
         if context.cardarea == G.jokers and context.joker_main  then

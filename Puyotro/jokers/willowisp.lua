@@ -3,13 +3,14 @@ SMODS.Joker{ --Will-o-Wisp
     key = "willowisp",
     config = {
         extra = {
-            WillOWispChips = 0
+            WillOWispChips = 0,
+            WillOWispGain = 20
         }
     },
     loc_txt = {
         ['name'] = 'Will-o-Wisp',
         ['text'] = {
-            [1] = 'Gains {C:blue}+20{} Chips when',
+            [1] = 'Gains {C:blue}+#2#{} Chips when',
             [2] = 'a card is {C:attention}destroyed{}',
             [3] = '{C:inactive}(Currently{} {C:blue}+#1# {}{C:inactive}Chips){}'
         },
@@ -37,14 +38,14 @@ SMODS.Joker{ --Will-o-Wisp
     
     loc_vars = function(self, info_queue, card)
         
-        return {vars = {card.ability.extra.WillOWispChips}}
+        return {vars = {card.ability.extra.WillOWispChips, card.ability.extra.WillOWispGain}}
     end,
     
     calculate = function(self, card, context)
         if context.remove_playing_cards  then
             return {
                 func = function()
-                    card.ability.extra.WillOWispChips = (card.ability.extra.WillOWispChips) + 20
+                    card.ability.extra.WillOWispChips = (card.ability.extra.WillOWispChips) + card.ability.extra.WillOWispGain
                     return true
                 end,
                 message = "Upgrade!"

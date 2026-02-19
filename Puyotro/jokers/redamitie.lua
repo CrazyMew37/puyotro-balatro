@@ -3,15 +3,15 @@ SMODS.Joker{ --Red Amitie
     key = "redamitie",
     config = {
         extra = {
-            odds = 3,
-            xmult0 = 2.4
+            RedAmitieMult = 2.4,
+            odds = 3
         }
     },
     loc_txt = {
         ['name'] = 'Red Amitie',
         ['text'] = {
-            [1] = '{C:green}#1# in #2#{} chance for each',
-            [2] = 'card to score {X:red,C:white}X2.4{} Mult'
+            [1] = '{C:green}#2# in #3#{} chance for each',
+            [2] = 'card to score {X:red,C:white}X#1#{} Mult'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
@@ -50,14 +50,14 @@ SMODS.Joker{ --Red Amitie
     loc_vars = function(self, info_queue, card)
         
         local new_numerator, new_denominator = SMODS.get_probability_vars(card, 2, card.ability.extra.odds, 'j_puyotro_redamitie') 
-        return {vars = {new_numerator, new_denominator}}
+        return {vars = {card.ability.extra.RedAmitieMult, new_numerator, new_denominator}}
     end,
     
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play  then
             if true then
                 if SMODS.pseudorandom_probability(card, 'group_0_b0985ab3', 2, card.ability.extra.odds, 'j_puyotro_redamitie', false) then
-                    SMODS.calculate_effect({Xmult = 2.4}, card)
+                    SMODS.calculate_effect({Xmult = card.ability.extra.RedAmitieMult}, card)
                 end
             end
         end

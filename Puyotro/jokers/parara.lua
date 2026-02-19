@@ -3,7 +3,8 @@ SMODS.Joker{ --Parara
     key = "parara",
     config = {
         extra = {
-            PararaMoney = 10
+            PararaMoney = 10,
+            PararaDecrease = -2
         }
     },
     loc_txt = {
@@ -11,7 +12,7 @@ SMODS.Joker{ --Parara
         ['text'] = {
             [1] = 'Earn {C:money}$#1# {}at the end',
             [2] = 'of the round',
-            [3] = 'Amount {C:attention}decreases{} by {C:money}$2{}',
+            [3] = 'Amount {C:attention}decreases{} by {C:money}$#2#{}',
             [4] = 'each round'
         },
         ['unlock'] = {
@@ -38,7 +39,7 @@ SMODS.Joker{ --Parara
     
     loc_vars = function(self, info_queue, card)
         
-        return {vars = {card.ability.extra.PararaMoney}}
+        return {vars = {card.ability.extra.PararaMoney, card.ability.extra.PararaDecrease}}
     end,
     
     calculate = function(self, card, context)

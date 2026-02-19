@@ -3,14 +3,15 @@ SMODS.Joker{ --Arle Nadja
     key = "arlenadja",
     config = {
         extra = {
-            ArleMult = 4
+            ArleMult = 4,
+            ArleIncrease = 2
         }
     },
     loc_txt = {
         ['name'] = 'Arle Nadja',
         ['text'] = {
             [1] = '{C:red}+#1# {}Mult',
-            [2] = 'Increases by {C:red}+2{} Mult every',
+            [2] = 'Increases by {C:red}+#2# {}Mult every',
             [3] = 'time this card is triggered'
         },
         ['unlock'] = {
@@ -37,13 +38,13 @@ SMODS.Joker{ --Arle Nadja
     
     loc_vars = function(self, info_queue, card)
         
-        return {vars = {card.ability.extra.ArleMult}}
+        return {vars = {card.ability.extra.ArleMult, card.ability.extra.ArleIncrease}}
     end,
     
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main  then
             local ArleMult_value = card.ability.extra.ArleMult
-            card.ability.extra.ArleMult = (card.ability.extra.ArleMult) + 2
+            card.ability.extra.ArleMult = (card.ability.extra.ArleMult) + card.ability.extra.ArleIncrease
             return {
                 mult = ArleMult_value,
                 extra = {

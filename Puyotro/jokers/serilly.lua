@@ -3,15 +3,15 @@ SMODS.Joker{ --Serilly
     key = "serilly",
     config = {
         extra = {
-            xchips0 = 2,
+            SerillyMult = 2,
             odds = 20
         }
     },
     loc_txt = {
         ['name'] = 'Serilly',
         ['text'] = {
-            [1] = '{X:blue,C:white}X2{} Chips',
-            [2] = '{C:green}#1# in #2# {}chance this card',
+            [1] = '{X:blue,C:white}X#1#{} Chips',
+            [2] = '{C:green}#2# in #3# {}chance this card',
             [3] = 'is {C:attention}destroyed{} each hand'
         },
         ['unlock'] = {
@@ -39,14 +39,14 @@ SMODS.Joker{ --Serilly
     loc_vars = function(self, info_queue, card)
         
         local new_numerator, new_denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'j_puyotro_serilly') 
-        return {vars = {new_numerator, new_denominator}}
+        return {vars = {card.ability.extra.SerillyMult, new_numerator, new_denominator}}
     end,
     
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main  then
             if true then
                 return {
-                    x_chips = 2
+                    x_chips = card.ability.extra.SerillyMult
                     ,
                     func = function()
                         if SMODS.pseudorandom_probability(card, 'group_0_31218980', 1, card.ability.extra.odds, 'j_puyotro_serilly', false) then

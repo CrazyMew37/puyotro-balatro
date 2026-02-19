@@ -4,17 +4,18 @@ SMODS.Joker{ --Masked Satan
     config = {
         extra = {
             MaskedSatanLevelUp = 2,
+            MaskedSatanIncrease = 1,
             odds = 12
         }
     },
     loc_txt = {
         ['name'] = 'Masked Satan',
         ['text'] = {
-            [1] = '{C:green}#2# in #3# {}chance to {C:attention}destroy{}',
+            [1] = '{C:green}#3# in #4# {}chance to {C:attention}destroy{}',
             [2] = 'a played card, destroyed',
             [3] = 'cards level up your most',
             [4] = 'played hand by {C:attention}#1# {}(Level',
-                [5] = 'increase goes up by {C:attention}1{} for',
+                [5] = 'increase goes up by {C:attention}#2#{} for',
             [6] = 'every successful trigger)'
         },
         ['unlock'] = {
@@ -54,7 +55,7 @@ SMODS.Joker{ --Masked Satan
     loc_vars = function(self, info_queue, card)
         
         local new_numerator, new_denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'j_puyotro_maskedsatan') 
-        return {vars = {card.ability.extra.MaskedSatanLevelUp, new_numerator, new_denominator}}
+        return {vars = {card.ability.extra.MaskedSatanLevelUp, card.ability.extra.MaskedSatanIncrease, new_numerator, new_denominator}}
     end,
     
     calculate = function(self, card, context)
@@ -93,7 +94,7 @@ SMODS.Joker{ --Masked Satan
                 message = "Level Up!",
                 extra = {
                     func = function()
-                        card.ability.extra.MaskedSatanLevelUp = (card.ability.extra.MaskedSatanLevelUp) + 1
+                        card.ability.extra.MaskedSatanLevelUp = (card.ability.extra.MaskedSatanLevelUp) + card.ability.extra.MaskedSatanIncrease
                         return true
                     end,
                     colour = G.C.GREEN

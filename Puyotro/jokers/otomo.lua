@@ -3,13 +3,13 @@ SMODS.Joker{ --Otomo
     key = "otomo",
     config = {
         extra = {
-            mult0 = 6
+            OtomoMult = 6
         }
     },
     loc_txt = {
         ['name'] = 'Otomo',
         ['text'] = {
-            [1] = '{C:red}+6{} Mult for each scoring',
+            [1] = '{C:red}+#1#{} Mult for each scoring',
             [2] = 'card with a {C:attention}Seal{}'
         },
         ['unlock'] = {
@@ -34,11 +34,16 @@ SMODS.Joker{ --Otomo
     atlas = 'CustomJokers',
     pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true },
     
+    loc_vars = function(self, info_queue, card)
+        
+        return {vars = {card.ability.extra.OtomoMult}}
+    end,
+    
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play  then
             if context.other_card.seal ~= nil then
                 return {
-                    mult = 6
+                    mult = card.ability.extra.OtomoMult
                 }
             end
         end

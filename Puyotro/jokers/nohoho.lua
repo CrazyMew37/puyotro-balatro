@@ -3,13 +3,14 @@ SMODS.Joker{ --Nohoho
     key = "nohoho",
     config = {
         extra = {
-            NohohoChips = 0
+            NohohoChips = 0,
+            NohohoIncrease = 10
         }
     },
     loc_txt = {
         ['name'] = 'Nohoho',
         ['text'] = {
-            [1] = 'This joker gains {C:blue}+10{} Chips',
+            [1] = 'This joker gains {C:blue}+#2#{} Chips',
             [2] = 'per {C:attention}reroll{} in the shop',
             [3] = '{C:inactive}(Currently{} {C:blue}+#1# {}{C:inactive}Chips){}'
         },
@@ -37,7 +38,7 @@ SMODS.Joker{ --Nohoho
     
     loc_vars = function(self, info_queue, card)
         
-        return {vars = {card.ability.extra.NohohoChips}}
+        return {vars = {card.ability.extra.NohohoChips, card.ability.extra.NohohoIncrease}}
     end,
     
     calculate = function(self, card, context)
@@ -49,7 +50,7 @@ SMODS.Joker{ --Nohoho
         if context.reroll_shop  then
             return {
                 func = function()
-                    card.ability.extra.NohohoChips = (card.ability.extra.NohohoChips) + 10
+                    card.ability.extra.NohohoChips = (card.ability.extra.NohohoChips) + card.ability.extra.NohohoIncrease
                     return true
                 end
             }

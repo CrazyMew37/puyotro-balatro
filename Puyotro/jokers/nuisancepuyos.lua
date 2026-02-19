@@ -3,14 +3,15 @@ SMODS.Joker{ --Nuisance Puyos
     key = "nuisancepuyos",
     config = {
         extra = {
-            PuyoMult = 0.7
+            PuyoMult = 0.7,
+            PuyoIncrease = 0.1
         }
     },
     loc_txt = {
         ['name'] = 'Nuisance Puyos',
         ['text'] = {
             [1] = '{X:red,C:white}X#1# {} Mult',
-            [2] = 'Increases by {X:red,C:white}X0.1{}',
+            [2] = 'Increases by {X:red,C:white}X#2# {}',
             [3] = 'Mult every time this',
             [4] = 'card is triggered'
         },
@@ -38,13 +39,13 @@ SMODS.Joker{ --Nuisance Puyos
     
     loc_vars = function(self, info_queue, card)
         
-        return {vars = {card.ability.extra.PuyoMult}}
+        return {vars = {card.ability.extra.PuyoMult, card.ability.extra.PuyoIncrease}}
     end,
     
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main  then
             local PuyoMult_value = card.ability.extra.PuyoMult
-            card.ability.extra.PuyoMult = (card.ability.extra.PuyoMult) + 0.1
+            card.ability.extra.PuyoMult = (card.ability.extra.PuyoMult) + card.ability.extra.PuyoIncrease
             return {
                 Xmult = PuyoMult_value
             }

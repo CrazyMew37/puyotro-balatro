@@ -3,13 +3,13 @@ SMODS.Joker{ --Maguro Sasaki
     key = "magurosasaki",
     config = {
         extra = {
-            xmult0 = 1.5
+            MaguroMult = 1.5
         }
     },
     loc_txt = {
         ['name'] = 'Maguro Sasaki',
         ['text'] = {
-            [1] = '{X:red,C:white}X1.5{} Mult for every',
+            [1] = '{X:red,C:white}X#1#{} Mult for every',
             [2] = '{C:purple}Purple Seal{} held in hand'
         },
         ['unlock'] = {
@@ -34,11 +34,16 @@ SMODS.Joker{ --Maguro Sasaki
     atlas = 'CustomJokers',
     pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true },
     
+    loc_vars = function(self, info_queue, card)
+        
+        return {vars = {card.ability.extra.MaguroMult}}
+    end,
+    
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.hand and not context.end_of_round  then
             if context.other_card.seal == "Purple" then
                 return {
-                    Xmult = 1.5
+                    Xmult = card.ability.extra.MaguroMult
                 }
             end
         end

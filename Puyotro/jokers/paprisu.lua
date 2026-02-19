@@ -3,12 +3,13 @@ SMODS.Joker{ --Paprisu
     key = "paprisu",
     config = {
         extra = {
+            PaprisuAmount = 2
         }
     },
     loc_txt = {
         ['name'] = 'Paprisu',
         ['text'] = {
-            [1] = 'Creates {C:attention}2{} random',
+            [1] = 'Creates {C:attention}#1#{} random',
             [2] = '{C:attention}Negative Consumables{} at the',
             [3] = '{C:attention}start{} of each {C:attention}Boss Blind{}'
         },
@@ -34,13 +35,18 @@ SMODS.Joker{ --Paprisu
     atlas = 'CustomJokers',
     pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true },
     
+    loc_vars = function(self, info_queue, card)
+        
+        return {vars = {card.ability.extra.PaprisuAmount}}
+    end,
+    
     calculate = function(self, card, context)
         if context.setting_blind  then
             if G.GAME.blind.boss then
                 return {
                     func = function()
                         
-                        for i = 1, 2 do
+                        for i = 1, card.ability.extra.PaprisuAmount do
                             G.E_MANAGER:add_event(Event({
                                 trigger = 'after',
                                 delay = 0.4,

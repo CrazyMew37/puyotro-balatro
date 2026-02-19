@@ -3,14 +3,14 @@ SMODS.Joker{ --Sultana
     key = "sultana",
     config = {
         extra = {
-            sell_value0 = 3
+            SultanaIncrease = 3
         }
     },
     loc_txt = {
         ['name'] = 'Sultana',
         ['text'] = {
             [1] = 'When a Joker or Consumable',
-            [2] = 'is {C:attention}sold{}, this card {C:attention}gains{} {C:money}$3{}',
+            [2] = 'is {C:attention}sold{}, this card {C:attention}gains{} {C:money}$#1#{}',
             [3] = 'of sell value'
         },
         ['unlock'] = {
@@ -35,6 +35,11 @@ SMODS.Joker{ --Sultana
     atlas = 'CustomJokers',
     pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true },
     
+    loc_vars = function(self, info_queue, card)
+        
+        return {vars = {card.ability.extra.SultanaIncrease}}
+    end,
+    
     calculate = function(self, card, context)
         if context.selling_card  then
             return {
@@ -46,11 +51,11 @@ SMODS.Joker{ --Sultana
                         end
                     end
                     local target_card = G.jokers.cards[my_pos]
-                    target_card.ability.extra_value = (card.ability.extra_value or 0) + 3
+                    target_card.ability.extra_value = (card.ability.extra_value or 0) + card.ability.extra.SultanaIncrease
                     target_card:set_cost()
                     return true
                 end,
-                message = "+"..tostring(3).." Sell Value"
+                message = "+"..tostring(card.ability.extra.SultanaIncrease).." Sell Value"
             }
         end
     end

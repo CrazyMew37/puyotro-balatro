@@ -3,13 +3,13 @@ SMODS.Joker{ --Hoho
     key = "hoho",
     config = {
         extra = {
-            xmult0 = 2
+            HohoMult = 2
         }
     },
     loc_txt = {
         ['name'] = 'Hoho',
         ['text'] = {
-            [1] = '{X:red,C:white}X2{} Mult if played hand',
+            [1] = '{X:red,C:white}X#1#{} Mult if played hand',
             [2] = 'has scoring {C:hearts}Hearts{} and {C:diamonds}Diamonds{}'
         },
         ['unlock'] = {
@@ -34,6 +34,11 @@ SMODS.Joker{ --Hoho
     atlas = 'CustomJokers',
     pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true },
     
+    loc_vars = function(self, info_queue, card)
+        
+        return {vars = {card.ability.extra.HohoMult}}
+    end,
+    
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main  then
             if ((function()
@@ -54,7 +59,7 @@ SMODS.Joker{ --Hoho
                 return count >= 1
             end)()) then
                 return {
-                    Xmult = 2
+                    Xmult = card.ability.extra.HohoMult
                 }
             end
         end

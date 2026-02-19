@@ -3,15 +3,15 @@ SMODS.Joker{ --Angelic Feli
     key = "angelicfeli",
     config = {
         extra = {
-            emult0 = 1.5,
+            FeliExpo = 1.5,
             odds = 12
         }
     },
     loc_txt = {
         ['name'] = 'Angelic Feli',
         ['text'] = {
-            [1] = 'Played {C:attention}Stone Cards{} score {X:enhanced,C:white}^1.5{} Mult',
-            [2] = '{C:green}#1# in #2# {}chance to convert scoring',
+            [1] = 'Played {C:attention}Stone Cards{} score {X:enhanced,C:white}^#1#{} Mult',
+            [2] = '{C:green}#2# in #3# {}chance to convert scoring',
             [3] = 'cards into {C:attention}Stone Cards{}'
         },
         ['unlock'] = {
@@ -51,14 +51,14 @@ SMODS.Joker{ --Angelic Feli
     loc_vars = function(self, info_queue, card)
         
         local new_numerator, new_denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'j_puyotro_angelicfeli') 
-        return {vars = {new_numerator, new_denominator}}
+        return {vars = {card.ability.extra.FeliExpo, new_numerator, new_denominator}}
     end,
     
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play  then
             if SMODS.get_enhancements(context.other_card)["m_stone"] == true then
                 return {
-                    e_mult = 1.5
+                    e_mult = card.ability.extra.FeliExpo
                 }
             elseif true then
                 if SMODS.pseudorandom_probability(card, 'group_0_8d04ea1c', 1, card.ability.extra.odds, 'j_puyotro_angelicfeli', false) then

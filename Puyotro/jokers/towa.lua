@@ -10,7 +10,7 @@ SMODS.Joker{ --Towa
         ['name'] = 'Towa',
         ['text'] = {
             [1] = 'If a round was beaten',
-            [2] = 'in {C:attention}one hand{}, create {C:attention}three{}',
+            [2] = 'in {C:attention}one hand{}, create {C:attention}3{}',
             [3] = 'random playing cards'
         },
         ['unlock'] = {

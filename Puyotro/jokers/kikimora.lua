@@ -3,15 +3,13 @@ SMODS.Joker{ --Kikimora
     key = "kikimora",
     config = {
         extra = {
-            xmult0 = 2.5,
-            xmult = 2.5,
-            xmult2 = 2.5
+            KikimoraMult = 2.5
         }
     },
     loc_txt = {
         ['name'] = 'Kikimora',
         ['text'] = {
-            [1] = '{X:red,C:white}X2.5{} Mult if a {C:attention}scored{} card has',
+            [1] = '{X:red,C:white}X#1#{} Mult if a {C:attention}scored{} card has',
             [2] = 'an {C:enhanced}edition{}, {C:enhanced}enhancement{}, or {C:enhanced}seal{}',
             [3] = '{C:attention}Removes{} the {C:enhanced}modifier{} of the scored',
             [4] = 'card that triggered this joker',
@@ -39,6 +37,11 @@ SMODS.Joker{ --Kikimora
     atlas = 'CustomJokers',
     pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true },
     
+    loc_vars = function(self, info_queue, card)
+        
+        return {vars = {card.ability.extra.KikimoraMult}}
+    end,
+    
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play  then
             if context.other_card.edition ~= nil then
@@ -52,7 +55,7 @@ SMODS.Joker{ --Kikimora
                     end
                 }))
                 return {
-                    Xmult = 2.5
+                    Xmult = card.ability.extra.KikimoraMult
                 }
             elseif (function()
                 local enhancements = SMODS.get_enhancements(context.other_card)
@@ -73,7 +76,7 @@ SMODS.Joker{ --Kikimora
                     end
                 }))
                 return {
-                    Xmult = 2.5
+                    Xmult = card.ability.extra.KikimoraMult
                 }
             elseif context.other_card.seal ~= nil then
                 local scored_card = context.other_card
@@ -87,7 +90,7 @@ SMODS.Joker{ --Kikimora
                     end
                 }))
                 return {
-                    Xmult = 2.5
+                    Xmult = card.ability.extra.KikimoraMult
                 }
             end
         end

@@ -3,19 +3,19 @@ SMODS.Joker{ --Panotty
     key = "panotty",
     config = {
         extra = {
-            PanottyChips = 0,
-            PanottyMult = 0,
-            chips0 = 120,
-            mult0 = 20
+            PanottyChips = 120,
+            PanottyMult = 20,
+            PuyoNeeded = 8,
+            NuisanceNeeded = 8
         }
     },
     loc_txt = {
         ['name'] = 'Panotty',
         ['text'] = {
-            [1] = '{C:blue}+120{} Chips if you have at',
-            [2] = 'least {C:attention}8{} Puyo Cards',
-            [3] = '{C:red}+20{} Mult if you have at',
-            [4] = 'least {C:attention}8{} Nuisance Cards'
+            [1] = '{C:blue}+#1#{} Chips if you have at',
+            [2] = 'least {C:attention}#3#{} Puyo Cards',
+            [3] = '{C:red}+#2#{} Mult if you have at',
+            [4] = 'least {C:attention}#4#{} Nuisance Cards'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
@@ -41,7 +41,7 @@ SMODS.Joker{ --Panotty
     
     loc_vars = function(self, info_queue, card)
         
-        return {vars = {card.ability.extra.PanottyChips, card.ability.extra.PanottyMult}}
+        return {vars = {card.ability.extra.PanottyChips, card.ability.extra.PanottyMult, card.ability.extra.PuyoNeeded, card.ability.extra.NuisanceNeeded}}
     end,
     
     calculate = function(self, card, context)
@@ -53,10 +53,10 @@ SMODS.Joker{ --Panotty
                         count = count + 1
                     end
                 end
-                return to_big(count) >= to_big(8)
+                return to_big(count) >= to_big(card.ability.extra.PuyoNeeded)
             end)() then
                 return {
-                    chips = 120
+                    chips = card.ability.extra.PanottyChips
                 }
             elseif (function()
                 local count = 0
@@ -65,10 +65,10 @@ SMODS.Joker{ --Panotty
                         count = count + 1
                     end
                 end
-                return to_big(count) >= to_big(8)
+                return to_big(count) >= to_big(card.ability.extra.NuisanceNeeded)
             end)() then
                 return {
-                    mult = 20
+                    mult = card.ability.extra.PanottyMult
                 }
             end
         end

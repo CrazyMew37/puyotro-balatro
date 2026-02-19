@@ -3,7 +3,8 @@ SMODS.Joker{ --Schezo Wegey
     key = "schezowegey",
     config = {
         extra = {
-            SchezoMoney = 2
+            SchezoMoney = 2,
+            SchezoIncrease = 1
         }
     },
     loc_txt = {
@@ -11,7 +12,7 @@ SMODS.Joker{ --Schezo Wegey
         ['text'] = {
             [1] = 'Earn {C:money}$#1# {}at the end of',
             [2] = 'the round, output increases',
-            [3] = 'by {C:money}$1{} each round'
+            [3] = 'by {C:money}#2# {}each round'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
@@ -37,7 +38,7 @@ SMODS.Joker{ --Schezo Wegey
     
     loc_vars = function(self, info_queue, card)
         
-        return {vars = {card.ability.extra.SchezoMoney}}
+        return {vars = {card.ability.extra.SchezoMoney, card.ability.extra.SchezoIncrease}}
     end,
     
     calculate = function(self, card, context)
@@ -56,7 +57,7 @@ SMODS.Joker{ --Schezo Wegey
                 end,
                 extra = {
                     func = function()
-                        card.ability.extra.SchezoMoney = (card.ability.extra.SchezoMoney) + 1
+                        card.ability.extra.SchezoMoney = (card.ability.extra.SchezoMoney) + card.ability.extra.SchezoIncrease
                         return true
                     end,
                     message = "Upgrade!",

@@ -3,14 +3,15 @@ SMODS.Joker{ --Jaan
     key = "jaan",
     config = {
         extra = {
-            JaanMult = 0
+            JaanMult = 4,
+            JaanIncrease = 4
         }
     },
     loc_txt = {
         ['name'] = 'Jaan',
         ['text'] = {
             [1] = '{C:red}+#1# {}Mult',
-            [2] = 'Mult increases by {C:red}+4{}',
+            [2] = 'Mult increases by {C:red}+#2#{}',
             [3] = 'the further {C:attention}right{}',
             [4] = 'this joker is'
         },
@@ -38,7 +39,7 @@ SMODS.Joker{ --Jaan
     
     loc_vars = function(self, info_queue, card)
         
-        return {vars = {card.ability.extra.JaanMult}}
+        return {vars = {card.ability.extra.JaanMult, card.ability.extra.JaanIncrease}}
     end,
     
     calculate = function(self, card, context)
@@ -61,7 +62,7 @@ SMODS.Joker{ --Jaan
                 end,
                 extra = {
                     func = function()
-                        card.ability.extra.JaanMult = (card.ability.extra.JaanMult) * 4
+                        card.ability.extra.JaanMult = (card.ability.extra.JaanMult) * card.ability.extra.JaanIncrease
                         return true
                     end,
                     colour = G.C.MULT
@@ -76,7 +77,7 @@ SMODS.Joker{ --Jaan
                     break
                 end
             end
-            card.ability.extra.JaanMult = (card.ability.extra.JaanMult) * 4
+            card.ability.extra.JaanMult = (card.ability.extra.JaanMult) * card.ability.extra.JaanIncrease
             return {
                 mult = JaanMult_value
             }

@@ -4,13 +4,13 @@ SMODS.Joker{ --Gogotte
     config = {
         extra = {
             GogotteHands = 6,
-            xchips0 = 5
+            GogotteMult = 5
         }
     },
     loc_txt = {
         ['name'] = 'Gogotte',
         ['text'] = {
-            [1] = '{X:red,C:white}X5{} Mult for the',
+            [1] = '{X:red,C:white}X#2#{} Mult for the',
             [2] = 'next {C:attention}#1# {}hand(s)'
         },
         ['unlock'] = {
@@ -37,14 +37,14 @@ SMODS.Joker{ --Gogotte
     
     loc_vars = function(self, info_queue, card)
         
-        return {vars = {card.ability.extra.GogotteHands}}
+        return {vars = {card.ability.extra.GogotteHands, card.ability.extra.GogotteMult}}
     end,
     
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main  then
             card.ability.extra.GogotteHands = (card.ability.extra.GogotteHands) + -1
             return {
-                x_chips = 5
+                Xmult = card.ability.extra.GogotteMult
             }
         end
         if context.after and context.cardarea == G.jokers  then

@@ -3,14 +3,14 @@ SMODS.Joker{ --Baldanders
     key = "baldanders",
     config = {
         extra = {
-            xmult0 = 1.25
+            StoneMult = 1.25
         }
     },
     loc_txt = {
         ['name'] = 'Baldanders',
         ['text'] = {
             [1] = 'Played {C:attention}Stone Cards{}',
-            [2] = 'give {X:red,C:white}X1.25{} Mult'
+            [2] = 'give {X:red,C:white}X#1#{} Mult'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
@@ -34,11 +34,16 @@ SMODS.Joker{ --Baldanders
     atlas = 'CustomJokers',
     pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true },
     
+    loc_vars = function(self, info_queue, card)
+        
+        return {vars = {card.ability.extra.StoneMult}}
+    end,
+    
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play  then
             if SMODS.get_enhancements(context.other_card)["m_stone"] == true then
                 return {
-                    Xmult = 1.25
+                    Xmult = card.ability.extra.StoneMult
                 }
             end
         end

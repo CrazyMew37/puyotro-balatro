@@ -3,13 +3,13 @@ SMODS.Joker{ --Succubus
     key = "succubus",
     config = {
         extra = {
-            chips0 = 20
+            SuccuChips = 20
         }
     },
     loc_txt = {
         ['name'] = 'Succubus',
         ['text'] = {
-            [1] = '{C:blue}+20{} Chips for each',
+            [1] = '{C:blue}+#1#{} Chips for each',
             [2] = 'played card that is',
             [3] = '{C:spades}Spades{} or {C:hearts}Hearts{}'
         },
@@ -35,11 +35,16 @@ SMODS.Joker{ --Succubus
     atlas = 'CustomJokers',
     pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true },
     
+    loc_vars = function(self, info_queue, card)
+        
+        return {vars = {card.ability.extra.SuccuChips}}
+    end,
+    
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play  then
             if (context.other_card:is_suit("Spades") or context.other_card:is_suit("Hearts")) then
                 return {
-                    chips = 20
+                    chips = card.ability.extra.SuccuChips
                 }
             end
         end

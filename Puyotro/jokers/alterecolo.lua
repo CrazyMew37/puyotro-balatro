@@ -12,7 +12,7 @@ SMODS.Joker{ --Alter Ecolo
     loc_txt = {
         ['name'] = 'Alter Ecolo',
         ['text'] = {
-            [1] = '{C:attention}?!?!?!{}'
+            [1] = '{C:dark_edition}?!?!?!{}'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'

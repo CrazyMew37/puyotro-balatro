@@ -3,14 +3,15 @@ SMODS.Joker{ --Rulue
     key = "rulue",
     config = {
         extra = {
-            RulueMult = 20
+            RulueMult = 20,
+            RulueIncrease = 10
         }
     },
     loc_txt = {
         ['name'] = 'Rulue',
         ['text'] = {
             [1] = '{C:blue}+#1# {}Chips',
-            [2] = 'Increases by {C:blue}+10{} Chips every',
+            [2] = 'Increases by {C:blue}+#2# {}Chips every',
             [3] = 'time this card is triggered'
         },
         ['unlock'] = {
@@ -37,13 +38,13 @@ SMODS.Joker{ --Rulue
     
     loc_vars = function(self, info_queue, card)
         
-        return {vars = {card.ability.extra.RulueMult}}
+        return {vars = {card.ability.extra.RulueMult, card.ability.extra.RulueIncrease}}
     end,
     
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main  then
             local RulueMult_value = card.ability.extra.RulueMult
-            card.ability.extra.RulueMult = (card.ability.extra.RulueMult) + 10
+            card.ability.extra.RulueMult = (card.ability.extra.RulueMult) + card.ability.extra.RulueIncrease
             return {
                 chips = RulueMult_value,
                 extra = {

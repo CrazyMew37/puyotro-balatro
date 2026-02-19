@@ -3,14 +3,13 @@ SMODS.Joker{ --Dark Schezo
     key = "darkschezo",
     config = {
         extra = {
-            MaskedSatanLevelUp = 2,
-            dollars0 = 1.5
+            DarkSchezoMult = 1.5
         }
     },
     loc_txt = {
         ['name'] = 'Dark Schezo',
         ['text'] = {
-            [1] = 'Multiplies money by {X:money,C:white}x1.5{}',
+            [1] = 'Multiplies money by {X:money,C:white}X#1#{}',
             [2] = 'at the end of the round',
             [3] = '(Triggers {C:attention}before{} payout)'
         },
@@ -50,7 +49,7 @@ SMODS.Joker{ --Dark Schezo
     
     loc_vars = function(self, info_queue, card)
         
-        return {vars = {card.ability.extra.MaskedSatanLevelUp}}
+        return {vars = {card.ability.extra.DarkSchezoMult}}
     end,
     
     calculate = function(self, card, context)
@@ -60,10 +59,10 @@ SMODS.Joker{ --Dark Schezo
                 func = function()
                     
                     local current_dollars = G.GAME.dollars
-                    local target_dollars = G.GAME.dollars * 1.5
+                    local target_dollars = G.GAME.dollars * card.ability.extra.DarkSchezoMult
                     local dollar_value = target_dollars - current_dollars
                     ease_dollars(dollar_value)
-                    card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = "X"..tostring(1.5), colour = G.C.MONEY})
+                    card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = "X"..tostring(card.ability.extra.DarkSchezoMult), colour = G.C.MONEY})
                     return true
                 end
             }
