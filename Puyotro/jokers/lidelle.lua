@@ -3,7 +3,7 @@ SMODS.Joker{ --Lidelle
     key = "lidelle",
     config = {
         extra = {
-            odds = 15
+            odds = 12
         }
     },
     loc_txt = {

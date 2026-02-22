@@ -12,8 +12,7 @@ SMODS.Joker{ --Parara
         ['text'] = {
             [1] = 'Earn {C:money}$#1# {}at the end',
             [2] = 'of the round',
-            [3] = 'Amount {C:attention}decreases{} by {C:money}$#2#{}',
-            [4] = 'each round'
+            [3] = '{C:red}#2#{} payout each round'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
@@ -30,7 +29,7 @@ SMODS.Joker{ --Parara
     cost = 5,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
+    eternal_compat = false,
     perishable_compat = true,
     unlocked = true,
     discovered = true,

@@ -3,7 +3,7 @@ SMODS.Joker{ --Possessed Klug
     key = "possessedklug",
     config = {
         extra = {
-            odds = 12
+            odds = 8
         }
     },
     loc_txt = {

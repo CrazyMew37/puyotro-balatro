@@ -8,7 +8,7 @@
     "description": "A collection of Jokers based on Puyo Puyo made by CrazyMew37, made with Joker Forge",
     "prefix": "puyotro",
     "main_file": "main.lua",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "priority": 0,
     "badge_colour": "33cc00",
     "badge_text_colour": "FFFFFF",
@@ -82,7 +82,6 @@
               "params": {
                 "value": {
                   "value": "TetrisMult",
-                  "label": "TetrisMult",
                   "valueType": "user_var"
                 }
               }
@@ -177,7 +176,6 @@
               "params": {
                 "value": {
                   "value": "AkumaChips",
-                  "label": "AkumaChips",
                   "valueType": "user_var"
                 }
               }
@@ -279,7 +277,6 @@
               "params": {
                 "value": {
                   "value": "AllyMult",
-                  "label": "AllyMult",
                   "valueType": "user_var"
                 }
               }
@@ -501,7 +498,7 @@
                 "valueType": "number"
               },
               "chance_denominator": {
-                "value": 15,
+                "value": 12,
                 "valueType": "number"
               },
               "respect_probability_effects": true,
@@ -618,7 +615,6 @@
               "params": {
                 "value": {
                   "value": "FeliExpo",
-                  "label": "FeliExpo",
                   "valueType": "user_var"
                 }
               }
@@ -645,7 +641,7 @@
                 "valueType": "number"
               },
               "chance_denominator": {
-                "value": 12,
+                "value": 8,
                 "valueType": "number"
               },
               "respect_probability_effects": true,
@@ -763,7 +759,6 @@
                   "params": {
                     "value": {
                       "value": "ArchanMult",
-                      "label": "ArchanMult",
                       "valueType": "user_var"
                     }
                   },
@@ -870,7 +865,6 @@
                 },
                 "value": {
                   "value": "ArleIncrease",
-                  "label": "ArleIncrease",
                   "valueType": "user_var"
                 }
               },
@@ -1086,7 +1080,6 @@
               "params": {
                 "value": {
                   "value": "StoneMult",
-                  "label": "StoneMult",
                   "valueType": "user_var"
                 }
               }
@@ -1206,7 +1199,6 @@
                 },
                 "value": {
                   "value": "BansheeIncrease",
-                  "label": "BansheeIncrease",
                   "valueType": "user_var"
                 }
               }
@@ -1355,7 +1347,6 @@
                     },
                     "value": {
                       "value": "CarbyMultIncrease",
-                      "label": "CarbyMultIncrease",
                       "valueType": "user_var"
                     }
                   },
@@ -1410,7 +1401,6 @@
                     },
                     "value": {
                       "value": "CarbyChipIncrease",
-                      "label": "CarbyChipIncrease",
                       "valueType": "user_var"
                     }
                   },
@@ -1488,7 +1478,6 @@
                     },
                     "value": {
                       "value": "CarbyMoneyIncrease",
-                      "label": "CarbyMoneyIncrease",
                       "valueType": "user_var"
                     }
                   },
@@ -1855,19 +1844,22 @@
               "params": {
                 "variable_name": {
                   "value": "DapperMult",
-                  "label": "DapperMult",
                   "valueType": "user_var"
                 },
                 "operation": {
                   "value": "set",
-                  "label": "Set to value",
                   "valueType": "text"
                 },
-                "index_method": {},
-                "joker_key": {
-                  "value": "j_joker"
+                "index_method": {
+                  "valueType": "unknown"
                 },
-                "joker_variable": {},
+                "joker_key": {
+                  "value": "j_joker",
+                  "valueType": "unknown"
+                },
+                "joker_variable": {
+                  "valueType": "unknown"
+                },
                 "value": {
                   "value": "GAMEVAR:enhanced_cards_in_deck|1|0",
                   "valueType": "game_var"
@@ -1880,22 +1872,24 @@
               "params": {
                 "variable_name": {
                   "value": "DapperMult",
-                  "label": "DapperMult",
                   "valueType": "user_var"
                 },
                 "operation": {
                   "value": "multiply",
-                  "label": "Multiply by value",
                   "valueType": "text"
                 },
-                "index_method": {},
-                "joker_key": {
-                  "value": "j_joker"
+                "index_method": {
+                  "valueType": "unknown"
                 },
-                "joker_variable": {},
+                "joker_key": {
+                  "value": "j_joker",
+                  "valueType": "unknown"
+                },
+                "joker_variable": {
+                  "valueType": "unknown"
+                },
                 "value": {
                   "value": "DapperValue",
-                  "label": "DapperValue",
                   "valueType": "user_var"
                 }
               }
@@ -1906,7 +1900,6 @@
               "params": {
                 "value": {
                   "value": "DapperMult",
-                  "label": "DapperMult",
                   "valueType": "conflicted_user_var"
                 }
               }
@@ -2017,7 +2010,6 @@
                 },
                 "value": {
                   "value": "ArleMultIncrease",
-                  "label": "ArleMultIncrease",
                   "valueType": "user_var"
                 }
               },
@@ -2057,7 +2049,6 @@
                 },
                 "value": {
                   "value": "ArleChipDecrease",
-                  "label": "ArleChipDecrease",
                   "valueType": "user_var"
                 }
               },
@@ -2157,7 +2148,6 @@
                 },
                 "value": {
                   "value": "DarkSchezoMult",
-                  "label": "DarkSchezoMult",
                   "valueType": "user_var"
                 },
                 "limit_dollars": {
@@ -2266,7 +2256,6 @@
                   "params": {
                     "value": {
                       "value": "DarkSigMult",
-                      "label": "DarkSigMult",
                       "valueType": "user_var"
                     }
                   }
@@ -2581,7 +2570,6 @@
                 },
                 "value": {
                   "value": "ArleIncrease",
-                  "label": "ArleIncrease",
                   "valueType": "user_var"
                 }
               },
@@ -2742,7 +2730,6 @@
                 },
                 "value": {
                   "value": "DracoReward",
-                  "label": "DracoReward",
                   "valueType": "user_var"
                 },
                 "limit_dollars": {
@@ -2963,7 +2950,6 @@
               "params": {
                 "value": {
                   "value": "TetrisMult",
-                  "label": "TetrisMult",
                   "valueType": "user_var"
                 }
               }
@@ -3066,7 +3052,6 @@
               "params": {
                 "value": {
                   "value": "TetrisMult",
-                  "label": "TetrisMult",
                   "valueType": "user_var"
                 }
               }
@@ -3169,7 +3154,6 @@
               "params": {
                 "value": {
                   "value": "TetrisMult",
-                  "label": "TetrisMult",
                   "valueType": "user_var"
                 }
               }
@@ -3248,7 +3232,7 @@
                 "valueType": "number"
               },
               "chance_denominator": {
-                "value": 15,
+                "value": 12,
                 "valueType": "number"
               },
               "respect_probability_effects": true,
@@ -3414,7 +3398,6 @@
               "params": {
                 "value": {
                   "value": "FrankMult",
-                  "label": "FrankMult",
                   "valueType": "user_var"
                 }
               }
@@ -3469,8 +3452,9 @@
       "overlayImagePreview": "",
       "rarity": 2,
       "cost": 4,
-      "blueprint_compat": true,
-      "eternal_compat": true,
+      "blueprint_compat": false,
+      "eternal_compat": false,
+      "perishable_compat": false,
       "unlocked": true,
       "discovered": true,
       "appears_in_shop": true,
@@ -3899,7 +3883,7 @@
       "rarity": 3,
       "cost": 7,
       "blueprint_compat": true,
-      "eternal_compat": true,
+      "eternal_compat": false,
       "unlocked": true,
       "discovered": true,
       "appears_in_shop": true,
@@ -3920,7 +3904,6 @@
               "params": {
                 "value": {
                   "value": "GogotteMult",
-                  "label": "GogotteMult",
                   "valueType": "user_var"
                 }
               }
@@ -4264,7 +4247,6 @@
               "params": {
                 "value": {
                   "value": "HarpyUp",
-                  "label": "HarpyUp",
                   "valueType": "user_var"
                 }
               }
@@ -4275,7 +4257,6 @@
               "params": {
                 "value": {
                   "value": "HarpyDown",
-                  "label": "HarpyDown",
                   "valueType": "user_var"
                 }
               }
@@ -4354,7 +4335,6 @@
               "params": {
                 "value": {
                   "value": "HarpyDown",
-                  "label": "HarpyDown",
                   "valueType": "user_var"
                 }
               }
@@ -4365,7 +4345,6 @@
               "params": {
                 "value": {
                   "value": "HarpyUp",
-                  "label": "HarpyUp",
                   "valueType": "user_var"
                 }
               }
@@ -4549,7 +4528,6 @@
               "params": {
                 "value": {
                   "value": "HohoMult",
-                  "label": "HohoMult",
                   "valueType": "user_var"
                 }
               }
@@ -4741,7 +4719,6 @@
               "params": {
                 "value": {
                   "value": "IncubChips",
-                  "label": "IncubChips",
                   "valueType": "user_var"
                 }
               }
@@ -4949,7 +4926,6 @@
                 },
                 "value": {
                   "value": "JaanIncrease",
-                  "label": "JaanIncrease",
                   "valueType": "user_var"
                 }
               }
@@ -5021,7 +4997,6 @@
                 },
                 "value": {
                   "value": "JaanIncrease",
-                  "label": "JaanIncrease",
                   "valueType": "user_var"
                 }
               }
@@ -5140,7 +5115,6 @@
               "params": {
                 "value": {
                   "value": "TetrisMult",
-                  "label": "TetrisMult",
                   "valueType": "user_var"
                 }
               }
@@ -5235,7 +5209,6 @@
               "params": {
                 "value": {
                   "value": "KikimoraMult",
-                  "label": "KikimoraMult",
                   "valueType": "user_var"
                 }
               }
@@ -5304,7 +5277,6 @@
               "params": {
                 "value": {
                   "value": "KikimoraMult",
-                  "label": "KikimoraMult",
                   "valueType": "user_var"
                 }
               }
@@ -5373,7 +5345,6 @@
               "params": {
                 "value": {
                   "value": "KikimoraMult",
-                  "label": "KikimoraMult",
                   "valueType": "user_var"
                 }
               }
@@ -5478,7 +5449,7 @@
                 "valueType": "number"
               },
               "chance_denominator": {
-                "value": 15,
+                "value": 12,
                 "valueType": "number"
               },
               "respect_probability_effects": true,
@@ -5579,7 +5550,7 @@
                 "valueType": "number"
               },
               "chance_denominator": {
-                "value": 15,
+                "value": 12,
                 "valueType": "number"
               },
               "respect_probability_effects": true,
@@ -5680,7 +5651,7 @@
                 "valueType": "number"
               },
               "chance_denominator": {
-                "value": 15,
+                "value": 12,
                 "valueType": "number"
               },
               "respect_probability_effects": true,
@@ -5800,7 +5771,6 @@
               "params": {
                 "value": {
                   "value": "LycanChips",
-                  "label": "LycanChips",
                   "valueType": "user_var"
                 }
               }
@@ -5895,7 +5865,6 @@
               "params": {
                 "value": {
                   "value": "MaguroMult",
-                  "label": "MaguroMult",
                   "valueType": "user_var"
                 }
               }
@@ -6070,7 +6039,6 @@
               "params": {
                 "value": {
                   "value": "MandrakeMult",
-                  "label": "MandrakeMult",
                   "valueType": "user_var"
                 }
               }
@@ -6173,7 +6141,6 @@
               "params": {
                 "value": {
                   "value": "MarleAmount",
-                  "label": "MarleAmount",
                   "valueType": "user_var"
                 }
               }
@@ -6327,7 +6294,6 @@
                 },
                 "value": {
                   "value": "MaskedSatanIncrease",
-                  "label": "MaskedSatanIncrease",
                   "valueType": "user_var"
                 }
               }
@@ -6409,7 +6375,6 @@
               "params": {
                 "value": {
                   "value": "MinoChips",
-                  "label": "MinoChips",
                   "valueType": "user_var"
                 }
               }
@@ -6420,7 +6385,6 @@
               "params": {
                 "value": {
                   "value": "MinoMult",
-                  "label": "MinoMult",
                   "valueType": "user_var"
                 }
               }
@@ -6505,7 +6469,7 @@
                 "valueType": "number"
               },
               "chance_denominator": {
-                "value": 15,
+                "value": 12,
                 "valueType": "number"
               },
               "respect_probability_effects": true,
@@ -6622,7 +6586,6 @@
                 },
                 "value": {
                   "value": "MummyGain",
-                  "label": "MummyGain",
                   "valueType": "user_var"
                 }
               },
@@ -6863,7 +6826,6 @@
                 },
                 "value": {
                   "value": "NohohoIncrease",
-                  "label": "NohohoIncrease",
                   "valueType": "user_var"
                 }
               }
@@ -6974,7 +6936,6 @@
                 },
                 "value": {
                   "value": "PuyoIncrease",
-                  "label": "PuyoIncrease",
                   "valueType": "user_var"
                 }
               }
@@ -7083,7 +7044,6 @@
               "params": {
                 "value": {
                   "value": "TetrisMult",
-                  "label": "TetrisMult",
                   "valueType": "user_var"
                 }
               }
@@ -7295,7 +7255,6 @@
               "params": {
                 "value": {
                   "value": "OnikoChips",
-                  "label": "OnikoChips",
                   "valueType": "user_var"
                 }
               }
@@ -7306,7 +7265,6 @@
               "params": {
                 "value": {
                   "value": "OnikoMult",
-                  "label": "OnikoMult",
                   "valueType": "user_var"
                 }
               }
@@ -7367,8 +7325,8 @@
       "overlayImagePreview": "",
       "rarity": 1,
       "cost": 5,
-      "blueprint_compat": true,
-      "eternal_compat": true,
+      "blueprint_compat": false,
+      "eternal_compat": false,
       "unlocked": true,
       "discovered": true,
       "appears_in_shop": true,
@@ -7480,7 +7438,6 @@
               "params": {
                 "value": {
                   "value": "OtomoMult",
-                  "label": "OtomoMult",
                   "valueType": "user_var"
                 }
               }
@@ -7535,8 +7492,8 @@
       "overlayImagePreview": "",
       "rarity": 2,
       "cost": 5,
-      "blueprint_compat": true,
-      "eternal_compat": true,
+      "blueprint_compat": false,
+      "eternal_compat": false,
       "unlocked": true,
       "discovered": true,
       "appears_in_shop": true,
@@ -7797,7 +7754,6 @@
                     },
                     "value": {
                       "value": "PuyoNeeded",
-                      "label": "PuyoNeeded",
                       "valueType": "user_var"
                     }
                   }
@@ -7812,7 +7768,6 @@
               "params": {
                 "value": {
                   "value": "PanottyChips",
-                  "label": "PanottyChips",
                   "valueType": "user_var"
                 }
               }
@@ -7865,7 +7820,6 @@
                     },
                     "value": {
                       "value": "NuisanceNeeded",
-                      "label": "NuisanceNeeded",
                       "valueType": "user_var"
                     }
                   }
@@ -7880,7 +7834,6 @@
               "params": {
                 "value": {
                   "value": "PanottyMult",
-                  "label": "PanottyMult",
                   "valueType": "user_var"
                 }
               }
@@ -8012,7 +7965,6 @@
                 },
                 "count": {
                   "value": "PaprisuAmount",
-                  "label": "PaprisuAmount",
                   "valueType": "user_var"
                 },
                 "ignore_slots": {
@@ -8066,13 +8018,13 @@
       "objectKey": "parara",
       "id": "5c9ce503-a5d3-4614-9b53-1c9516352715",
       "name": "Parara",
-      "description": "Earn {C:money}$#1# {}at the end[s]of the round[s]Amount {C:attention}decreases{} by {C:money}$#2#{}[s]each round",
+      "description": "Earn {C:money}$#1# {}at the end[s]of the round[s]{C:red}#2#{} payout each round",
       "imagePreview": "data:image/png;base64,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",
       "overlayImagePreview": "",
       "rarity": 1,
       "cost": 5,
       "blueprint_compat": true,
-      "eternal_compat": true,
+      "eternal_compat": false,
       "unlocked": true,
       "discovered": true,
       "appears_in_shop": true,
@@ -8306,7 +8258,7 @@
                 "valueType": "number"
               },
               "chance_denominator": {
-                "value": 15,
+                "value": 12,
                 "valueType": "number"
               },
               "respect_probability_effects": true,
@@ -8407,7 +8359,7 @@
                 "valueType": "number"
               },
               "chance_denominator": {
-                "value": 12,
+                "value": 8,
                 "valueType": "number"
               },
               "respect_probability_effects": true,
@@ -8449,7 +8401,7 @@
                 "valueType": "number"
               },
               "chance_denominator": {
-                "value": 12,
+                "value": 8,
                 "valueType": "number"
               },
               "respect_probability_effects": true,
@@ -8491,7 +8443,7 @@
                 "valueType": "number"
               },
               "chance_denominator": {
-                "value": 12,
+                "value": 8,
                 "valueType": "number"
               },
               "respect_probability_effects": true,
@@ -8592,7 +8544,6 @@
               "params": {
                 "value": {
                   "value": "SaldeMult",
-                  "label": "SaldeMult",
                   "valueType": "user_var"
                 }
               }
@@ -9000,7 +8951,6 @@
                 },
                 "value": {
                   "value": "PuyoIncrease",
-                  "label": "PuyoIncrease",
                   "valueType": "user_var"
                 }
               }
@@ -9085,7 +9035,7 @@
                 "valueType": "number"
               },
               "chance_denominator": {
-                "value": 15,
+                "value": 12,
                 "valueType": "number"
               },
               "respect_probability_effects": true,
@@ -9236,7 +9186,6 @@
                 },
                 "value": {
                   "value": "RafisolIncrease",
-                  "label": "RafisolIncrease",
                   "valueType": "user_var"
                 }
               },
@@ -9369,7 +9318,6 @@
               "params": {
                 "value": {
                   "value": "RagnusMult",
-                  "label": "RagnusMult",
                   "valueType": "user_var"
                 }
               }
@@ -9460,7 +9408,6 @@
                   "params": {
                     "value": {
                       "value": "RedAmitieMult",
-                      "label": "RedAmitieMult",
                       "valueType": "user_var"
                     }
                   }
@@ -9550,7 +9497,6 @@
               "params": {
                 "value": {
                   "value": "ReiDecrease",
-                  "label": "ReiDecrease",
                   "valueType": "user_var"
                 }
               }
@@ -9588,7 +9534,6 @@
               "params": {
                 "value": {
                   "value": "ReiMult",
-                  "label": "ReiMult",
                   "valueType": "user_var"
                 }
               }
@@ -9689,7 +9634,6 @@
               "params": {
                 "value": {
                   "value": "RingoMult",
-                  "label": "RingoMult",
                   "valueType": "user_var"
                 }
               }
@@ -9784,7 +9728,6 @@
               "params": {
                 "value": {
                   "value": "RisukumaMult",
-                  "label": "RisukumaMult",
                   "valueType": "user_var"
                 }
               }
@@ -10089,7 +10032,6 @@
                 },
                 "value": {
                   "value": "RulueIncrease",
-                  "label": "RulueIncrease",
                   "valueType": "user_var"
                 }
               },
@@ -10177,7 +10119,6 @@
                 },
                 "value": {
                   "value": "MoleHandSize",
-                  "label": "MoleHandSize",
                   "valueType": "user_var"
                 }
               }
@@ -10202,7 +10143,6 @@
               "params": {
                 "value": {
                   "value": "MoleMult",
-                  "label": "MoleMult",
                   "valueType": "user_var"
                 }
               }
@@ -10303,7 +10243,6 @@
                 },
                 "value": {
                   "value": "SasoriMinusDecrease",
-                  "label": "SasoriMinusDecrease",
                   "valueType": "user_var"
                 }
               }
@@ -10332,7 +10271,6 @@
                 },
                 "value": {
                   "value": "SasoriMultIncrease",
-                  "label": "SasoriMultIncrease",
                   "valueType": "user_var"
                 }
               },
@@ -10593,7 +10531,6 @@
                 },
                 "value": {
                   "value": "SchezoIncrease",
-                  "label": "SchezoIncrease",
                   "valueType": "user_var"
                 }
               },
@@ -11053,7 +10990,6 @@
               "params": {
                 "value": {
                   "value": "SerillyMult",
-                  "label": "SerillyMult",
                   "valueType": "user_var"
                 }
               }
@@ -11186,7 +11122,7 @@
                 "valueType": "number"
               },
               "chance_denominator": {
-                "value": 15,
+                "value": 12,
                 "valueType": "number"
               },
               "respect_probability_effects": true,
@@ -11263,7 +11199,7 @@
       "overlayImagePreview": "",
       "rarity": 3,
       "cost": 10,
-      "blueprint_compat": true,
+      "blueprint_compat": false,
       "eternal_compat": true,
       "unlocked": true,
       "discovered": true,
@@ -11438,7 +11374,6 @@
               "params": {
                 "value": {
                   "value": "SquaresAmount",
-                  "label": "SquaresAmount",
                   "valueType": "user_var"
                 }
               }
@@ -11647,7 +11582,6 @@
               "params": {
                 "value": {
                   "value": "SuccuChips",
-                  "label": "SuccuChips",
                   "valueType": "user_var"
                 }
               }
@@ -11732,7 +11666,6 @@
                 },
                 "value": {
                   "value": "SukeHands",
-                  "label": "SukeHands",
                   "valueType": "user_var"
                 }
               }
@@ -11751,7 +11684,6 @@
                 },
                 "value": {
                   "value": "SukeDiscards",
-                  "label": "SukeDiscards",
                   "valueType": "user_var"
                 }
               }
@@ -11766,7 +11698,6 @@
                 },
                 "value": {
                   "value": "SukeHandSize",
-                  "label": "SukeHandSize",
                   "valueType": "user_var"
                 }
               }
@@ -11867,7 +11798,6 @@
                 },
                 "value": {
                   "value": "SultanaIncrease",
-                  "label": "SultanaIncrease",
                   "valueType": "user_var"
                 }
               }
@@ -11946,7 +11876,7 @@
                 "valueType": "number"
               },
               "chance_denominator": {
-                "value": 15,
+                "value": 12,
                 "valueType": "number"
               },
               "respect_probability_effects": true,
@@ -12071,7 +12001,6 @@
               "params": {
                 "value": {
                   "value": "TetrisMult",
-                  "label": "TetrisMult",
                   "valueType": "user_var"
                 }
               }
@@ -12470,7 +12399,6 @@
                 },
                 "value": {
                   "value": "WillOWispGain",
-                  "label": "WillOWispGain",
                   "valueType": "user_var"
                 }
               },
@@ -12706,7 +12634,6 @@
                 },
                 "value": {
                   "value": "SatanChipIncrease",
-                  "label": "SatanChipIncrease",
                   "valueType": "user_var"
                 }
               },
@@ -12736,7 +12663,6 @@
                 },
                 "value": {
                   "value": "SatanMultIncrease",
-                  "label": "SatanMultIncrease",
                   "valueType": "user_var"
                 }
               },
@@ -12766,7 +12692,6 @@
                 },
                 "value": {
                   "value": "SatanMoneyIncrease",
-                  "label": "SatanMoneyIncrease",
                   "valueType": "user_var"
                 }
               },
@@ -12977,7 +12902,6 @@
               "params": {
                 "value": {
                   "value": "YuMult",
-                  "label": "YuMult",
                   "valueType": "user_var"
                 }
               }
@@ -13126,7 +13050,6 @@
               "params": {
                 "value": {
                   "value": "TetrisMult",
-                  "label": "TetrisMult",
                   "valueType": "user_var"
                 }
               }
@@ -13620,7 +13543,8 @@
                   "valueType": "text"
                 },
                 "count": {
-                  "value": "2"
+                  "value": "2",
+                  "valueType": "unknown"
                 },
                 "enhancement": {
                   "value": "m_puyotro_puyocard",
@@ -13715,7 +13639,8 @@
                   "valueType": "text"
                 },
                 "count": {
-                  "value": "2"
+                  "value": "2",
+                  "valueType": "unknown"
                 },
                 "enhancement": {
                   "value": "none",
@@ -13826,7 +13751,8 @@
                   "valueType": "text"
                 },
                 "count": {
-                  "value": "2"
+                  "value": "2",
+                  "valueType": "unknown"
                 },
                 "enhancement": {
                   "value": "m_puyotro_nuisancecard",
@@ -13935,7 +13861,6 @@
                 },
                 "value": {
                   "value": "PuyoMultIncrease",
-                  "label": "PuyoMultIncrease",
                   "valueType": "user_var"
                 }
               },
@@ -14029,7 +13954,6 @@
                 },
                 "value": {
                   "value": "PuyoChipIncrease",
-                  "label": "PuyoChipIncrease",
                   "valueType": "user_var"
                 }
               },
@@ -14118,7 +14042,6 @@
               "params": {
                 "value": {
                   "value": "FeverMult",
-                  "label": "FeverMult",
                   "valueType": "user_var"
                 }
               }
@@ -15359,5 +15282,5 @@
     }
   ],
   "version": "1.0.0",
-  "exportedAt": "2026-02-19T05:39:15.203Z"
+  "exportedAt": "2026-02-22T08:03:02.843Z"
 }
