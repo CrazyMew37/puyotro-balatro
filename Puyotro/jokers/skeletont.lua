@@ -37,6 +37,13 @@ SMODS.Joker{ --Skeleton T
     calculate = function(self, card, context)
         if context.end_of_round and context.game_over and context.main_eval  then
             if to_big(G.GAME.chips / G.GAME.blind.chips) >= to_big(0.8) then
+                G.E_MANAGER:add_event(Event({
+                    func = function()
+                        play_sound("puyotro_puyogarbage")
+                        
+                        return true
+                    end,
+                }))
                 return {
                     saved = true,
                     message = "Macha!"

@@ -3,7 +3,7 @@ SMODS.Joker{ --Raffina
     key = "raffina",
     config = {
         extra = {
-            odds = 12
+            odds = 10
         }
     },
     loc_txt = {
@@ -25,7 +25,7 @@ SMODS.Joker{ --Raffina
         w = 71 * 1, 
         h = 95 * 1
     },
-    cost = 7,
+    cost = 8,
     rarity = 2,
     blueprint_compat = true,
     eternal_compat = true,

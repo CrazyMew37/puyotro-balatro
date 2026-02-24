@@ -44,6 +44,13 @@ SMODS.Joker{ --Archan
         if context.cardarea == G.jokers and context.joker_main  then
             if true then
                 if SMODS.pseudorandom_probability(card, 'group_0_aa50cdb1', 1, card.ability.extra.odds, 'j_puyotro_archan', false) then
+                    G.E_MANAGER:add_event(Event({
+                        func = function()
+                            play_sound("puyotro_puyogarbage")
+                            
+                            return true
+                        end,
+                    }))
                     SMODS.calculate_effect({Xmult = card.ability.extra.ArchanMult}, card)
                     card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = "Bullseye!", colour = G.C.WHITE})
                 end

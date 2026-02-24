@@ -4,9 +4,9 @@ SMODS.Joker{ --Panotty
     config = {
         extra = {
             PanottyChips = 120,
-            PanottyMult = 20,
-            PuyoNeeded = 8,
-            NuisanceNeeded = 8
+            PanottyMult = 24,
+            PuyoNeeded = 4,
+            NuisanceNeeded = 6
         }
     },
     loc_txt = {

@@ -33,6 +33,14 @@ SMODS.Atlas({
 })
 
 SMODS.Atlas({
+    key = "CustomBoosters", 
+    path = "CustomBoosters.png", 
+    px = 71,
+    py = 95, 
+    atlas_table = "ASSET_ATLAS"
+})
+
+SMODS.Atlas({
     key = "CustomEnhancements", 
     path = "CustomEnhancements.png", 
     px = 71,
@@ -145,6 +153,13 @@ local function load_decks_folder()
     end
 end
 
+
+local function load_boosters_file()
+    local mod_path = SMODS.current_mod.path
+    assert(SMODS.load_file("boosters.lua"))()
+end
+
+load_boosters_file()
 assert(SMODS.load_file("sounds.lua"))()
 load_jokers_folder()
 load_consumables_folder()

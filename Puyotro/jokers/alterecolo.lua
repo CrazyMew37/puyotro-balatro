@@ -5,8 +5,8 @@ SMODS.Joker{ --Alter Ecolo
         extra = {
             echips0_min = NaN,
             echips0_max = 1.77,
-            xmult0_min = NaN,
-            xmult0_max = 1.77
+            emult0_min = NaN,
+            emult0_max = 1.77
         }
     },
     loc_txt = {
@@ -42,8 +42,8 @@ SMODS.Joker{ --Alter Ecolo
     in_pool = function(self, args)
         return (
             not args 
-            or args.source ~= 'sho' 
-            or args.source == 'buf' or args.source == 'jud' or args.source == 'rif' or args.source == 'rta' or args.source == 'sou' or args.source == 'uta' or args.source == 'wra'
+            or args.source ~= 'sho' and args.source ~= 'jud' 
+            or args.source == 'buf' or args.source == 'rif' or args.source == 'rta' or args.source == 'sou' or args.source == 'uta' or args.source == 'wra'
         )
         and true
     end,
@@ -53,7 +53,8 @@ SMODS.Joker{ --Alter Ecolo
             return {
                 e_chips = pseudorandom('RANGE:1.07|1.77', 1.07, 1.77),
                 extra = {
-                    Xmult = pseudorandom('RANGE:1.07|1.77', 1.07, 1.77)
+                    e_mult = pseudorandom('RANGE:1.07|1.77', 1.07, 1.77),
+                    colour = G.C.DARK_EDITION
                 }
             }
         end

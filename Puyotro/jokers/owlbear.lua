@@ -46,6 +46,13 @@ SMODS.Joker{ --Owlbear
     calculate = function(self, card, context)
         if context.after and context.cardarea == G.jokers  then
             if to_big(G.GAME.current_round.hands_left) <= to_big(0) then
+                G.E_MANAGER:add_event(Event({
+                    func = function()
+                        play_sound("puyotro_puyogarbage")
+                        
+                        return true
+                    end,
+                }))
                 return {
                     
                     func = function()

@@ -4,13 +4,13 @@ SMODS.Joker{ --Ecolo
     config = {
         extra = {
             chips0_min = NaN,
-            chips0_max = 210,
+            chips0_max = 207,
             mult0_min = NaN,
-            mult0_max = 28,
+            mult0_max = 27,
             xchips0_min = NaN,
-            xchips0_max = 2.7,
+            xchips0_max = 1.7,
             xmult0_min = NaN,
-            xmult0_max = 2.7
+            xmult0_max = 1.7
         }
     },
     loc_txt = {
@@ -43,14 +43,14 @@ SMODS.Joker{ --Ecolo
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main  then
             return {
-                chips = pseudorandom('RANGE:-70|210', -70, 210),
+                chips = pseudorandom('RANGE:7|207', 7, 207),
                 extra = {
-                    mult = pseudorandom('RANGE:-7|28', -7, 28),
+                    mult = pseudorandom('RANGE:7|27', 7, 27),
                     extra = {
-                        x_chips = pseudorandom('RANGE:0.35|2.7', 0.35, 2.7),
+                        x_chips = pseudorandom('RANGE:1.07|1.7', 1.07, 1.7),
                         colour = G.C.DARK_EDITION,
                         extra = {
-                            Xmult = pseudorandom('RANGE:0.35|2.7', 0.35, 2.7)
+                            Xmult = pseudorandom('RANGE:1.07|1.7', 1.07, 1.7)
                         }
                     }
                 }

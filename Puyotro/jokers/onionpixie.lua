@@ -37,6 +37,13 @@ SMODS.Joker{ --Onion Pixie
     
     calculate = function(self, card, context)
         if context.selling_card  then
+            G.E_MANAGER:add_event(Event({
+                func = function()
+                    play_sound("puyotro_puyogarbage")
+                    
+                    return true
+                end,
+            }))
             return {
                 
                 func = function()

@@ -4,7 +4,7 @@ SMODS.Joker{ --Prince Salde
     config = {
         extra = {
             SaldeMult = 2,
-            odds = 20
+            odds = 12
         }
     },
     loc_txt = {

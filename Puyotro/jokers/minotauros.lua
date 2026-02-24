@@ -3,7 +3,7 @@ SMODS.Joker{ --Minotauros
     key = "minotauros",
     config = {
         extra = {
-            MinoChips = 80,
+            MinoChips = 100,
             MinoMult = -8
         }
     },

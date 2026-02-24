@@ -3,7 +3,7 @@ SMODS.Joker{ --Samurai Mole
     key = "samuraimole",
     config = {
         extra = {
-            MoleMult = 15,
+            MoleMult = 24,
             MoleHandSize = 2
         }
     },

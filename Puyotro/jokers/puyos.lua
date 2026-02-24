@@ -46,8 +46,19 @@ SMODS.Joker{ --Puyos
         if context.cardarea == G.jokers and context.joker_main  then
             local PuyoMult_value = card.ability.extra.PuyoMult
             card.ability.extra.PuyoMult = (card.ability.extra.PuyoMult) + card.ability.extra.PuyoIncrease
+            G.E_MANAGER:add_event(Event({
+                func = function()
+                    play_sound("puyotro_puyoplace")
+                    
+                    return true
+                end,
+            }))
             return {
-                x_chips = PuyoMult_value
+                x_chips = PuyoMult_value,
+                extra = {
+                    message = "Upgrade!",
+                    colour = G.C.GREEN
+                }
             }
         end
     end
