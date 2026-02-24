@@ -36,7 +36,7 @@ SMODS.Joker{ --Ally
     unlocked = true,
     discovered = true,
     atlas = 'CustomJokers',
-    pools = { ["puyotro_mycustom_jokers"] = true },
+    pools = { ["puyotro_mycustom_jokers"] = true, ["puyotro_puyotro_legendaries"] = true },
     soul_pos = {
         x = 3,
         y = 10

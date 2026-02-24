@@ -33,7 +33,7 @@ SMODS.Joker{ --Dark Schezo
     unlocked = true,
     discovered = true,
     atlas = 'CustomJokers',
-    pools = { ["puyotro_puyotro_jokers"] = true },
+    pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_legendaries"] = true },
     soul_pos = {
         x = 5,
         y = 9

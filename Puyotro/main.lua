@@ -382,9 +382,141 @@ SMODS.ObjectType({
 })
 
 SMODS.ObjectType({
+    key = "puyotro_puyotro_rares",
+    cards = {
+        ["j_puyotro_ai"] = true,
+        ["j_puyotro_archan"] = true,
+        ["j_puyotro_atari"] = true,
+        ["j_puyotro_chico"] = true,
+        ["j_puyotro_darksig"] = true,
+        ["j_puyotro_darkwitch"] = true,
+        ["j_puyotro_ecolo"] = true,
+        ["j_puyotro_elle"] = true,
+        ["j_puyotro_ess"] = true,
+        ["j_puyotro_ex"] = true,
+        ["j_puyotro_gogotte"] = true,
+        ["j_puyotro_issen"] = true,
+        ["j_puyotro_jay"] = true,
+        ["j_puyotro_mandrake"] = true,
+        ["j_puyotro_o"] = true,
+        ["j_puyotro_paprisu"] = true,
+        ["j_puyotro_possessedklug"] = true,
+        ["j_puyotro_princesalde"] = true,
+        ["j_puyotro_puubot"] = true,
+        ["j_puyotro_roquier"] = true,
+        ["j_puyotro_rozatte"] = true,
+        ["j_puyotro_sasoriman"] = true,
+        ["j_puyotro_scylla"] = true,
+        ["j_puyotro_seo"] = true,
+        ["j_puyotro_skeletont"] = true,
+        ["j_puyotro_sultana"] = true,
+        ["j_puyotro_tee"] = true,
+        ["j_puyotro_towa"] = true,
+        ["j_puyotro_yellowsatan"] = true,
+        ["j_puyotro_zed"] = true
+    },
+})
+
+SMODS.ObjectType({
+    key = "puyotro_puyotro_commons",
+    cards = {
+        ["j_puyotro_akuma"] = true,
+        ["j_puyotro_arlenadja"] = true,
+        ["j_puyotro_baldanders"] = true,
+        ["j_puyotro_bansheetrio"] = true,
+        ["j_puyotro_carbuncle"] = true,
+        ["j_puyotro_dapperbones"] = true,
+        ["j_puyotro_darkarle"] = true,
+        ["j_puyotro_dongurigaeru"] = true,
+        ["j_puyotro_doppelgangerarle"] = true,
+        ["j_puyotro_dracocentauros"] = true,
+        ["j_puyotro_harpy"] = true,
+        ["j_puyotro_incubus"] = true,
+        ["j_puyotro_magurosasaki"] = true,
+        ["j_puyotro_minotauros"] = true,
+        ["j_puyotro_mummy"] = true,
+        ["j_puyotro_nuisancepuyos"] = true,
+        ["j_puyotro_onionpixie"] = true,
+        ["j_puyotro_panotty"] = true,
+        ["j_puyotro_parara"] = true,
+        ["j_puyotro_puyos"] = true,
+        ["j_puyotro_ragnusthebrave"] = true,
+        ["j_puyotro_ringoando"] = true,
+        ["j_puyotro_risukuma"] = true,
+        ["j_puyotro_rulue"] = true,
+        ["j_puyotro_satan"] = true,
+        ["j_puyotro_schezowegey"] = true,
+        ["j_puyotro_succubus"] = true,
+        ["j_puyotro_suketoudara"] = true,
+        ["j_puyotro_willowisp"] = true,
+        ["j_puyotro_witch"] = true
+    },
+})
+
+SMODS.ObjectType({
     key = "puyotro_mycustom_jokers",
     cards = {
         ["j_puyotro_ally"] = true
+    },
+})
+
+SMODS.ObjectType({
+    key = "puyotro_puyotro_legendaries",
+    cards = {
+        ["j_puyotro_ally"] = true,
+        ["j_puyotro_alterecolo"] = true,
+        ["j_puyotro_angelicfeli"] = true,
+        ["j_puyotro_darkschezo"] = true,
+        ["j_puyotro_marle"] = true,
+        ["j_puyotro_maskedsatan"] = true,
+        ["j_puyotro_negakikimora"] = true,
+        ["j_puyotro_rafisol"] = true,
+        ["j_puyotro_redamitie"] = true,
+        ["j_puyotro_squares"] = true
+    },
+})
+
+SMODS.ObjectType({
+    key = "puyotro_puyotro_uncommons",
+    cards = {
+        ["j_puyotro_amitie"] = true,
+        ["j_puyotro_feli"] = true,
+        ["j_puyotro_frankensteins"] = true,
+        ["j_puyotro_fufufu"] = true,
+        ["j_puyotro_hachi"] = true,
+        ["j_puyotro_hoho"] = true,
+        ["j_puyotro_honeybee"] = true,
+        ["j_puyotro_jaan"] = true,
+        ["j_puyotro_kikimora"] = true,
+        ["j_puyotro_klug"] = true,
+        ["j_puyotro_lemres"] = true,
+        ["j_puyotro_lidelle"] = true,
+        ["j_puyotro_lycanthrope"] = true,
+        ["j_puyotro_msaccord"] = true,
+        ["j_puyotro_nohoho"] = true,
+        ["j_puyotro_oceanprince"] = true,
+        ["j_puyotro_oniko"] = true,
+        ["j_puyotro_otomo"] = true,
+        ["j_puyotro_owlbear"] = true,
+        ["j_puyotro_popoi"] = true,
+        ["j_puyotro_raffina"] = true,
+        ["j_puyotro_rei"] = true,
+        ["j_puyotro_samuraimole"] = true,
+        ["j_puyotro_serilly"] = true,
+        ["j_puyotro_sig"] = true,
+        ["j_puyotro_tartar"] = true,
+        ["j_puyotro_ten"] = true,
+        ["j_puyotro_yu"] = true,
+        ["j_puyotro_zero"] = true,
+        ["j_puyotro_zohdaimaoh"] = true
+    },
+})
+
+SMODS.ObjectType({
+    key = "puyotro_Food",
+    cards = {
+        ["j_puyotro_gogotte"] = true,
+        ["j_puyotro_onionpixie"] = true
     },
 })
 

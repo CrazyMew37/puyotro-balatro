@@ -33,7 +33,7 @@ SMODS.Joker{ --Witch
     unlocked = true,
     discovered = true,
     atlas = 'CustomJokers',
-    pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true },
+    pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true, ["puyotro_puyotro_commons"] = true },
     
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play  then

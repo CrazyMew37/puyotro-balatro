@@ -34,7 +34,7 @@ SMODS.Joker{ --Zoh Daimaoh
     unlocked = true,
     discovered = true,
     atlas = 'CustomJokers',
-    pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true },
+    pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true, ["puyotro_puyotro_uncommons"] = true },
     
     calculate = function(self, card, context)
         if context.end_of_round and context.game_over == false and context.main_eval  then

@@ -33,7 +33,7 @@ SMODS.Joker{ --Onion Pixie
     unlocked = true,
     discovered = true,
     atlas = 'CustomJokers',
-    pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true },
+    pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true, ["puyotro_puyotro_commons"] = true, ["puyotro_Food"] = true },
     
     calculate = function(self, card, context)
         if context.selling_card  then

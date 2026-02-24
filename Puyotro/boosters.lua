@@ -13,6 +13,7 @@ SMODS.Booster {
     weight = 0.4,
     atlas = "CustomBoosters",
     pos = { x = 0, y = 0 },
+    kind = 'Puyo Puyo Pack',
     group_key = "puyotro_boosters",
     discovered = true,
     loc_vars = function(self, info_queue, card)
@@ -45,7 +46,7 @@ SMODS.Booster {
         end
         if selected_index == 1 then
             return {
-                set = "puyotro_puyotro_jokers",
+                set = "puyotro_puyotro_commons",
                 rarity = "Common",
                 area = G.pack_cards,
                 skip_materialize = true,
@@ -54,7 +55,7 @@ SMODS.Booster {
             }
         elseif selected_index == 2 then
             return {
-                set = "puyotro_puyotro_jokers",
+                set = "puyotro_puyotro_commons",
                 rarity = "Common",
                 area = G.pack_cards,
                 skip_materialize = true,
@@ -63,7 +64,7 @@ SMODS.Booster {
             }
         elseif selected_index == 3 then
             return {
-                set = "puyotro_puyotro_jokers",
+                set = "puyotro_puyotro_uncommons",
                 rarity = "Uncommon",
                 area = G.pack_cards,
                 skip_materialize = true,
@@ -72,7 +73,7 @@ SMODS.Booster {
             }
         elseif selected_index == 4 then
             return {
-                set = "puyotro_puyotro_jokers",
+                set = "puyotro_puyotro_rares",
                 rarity = "Rare",
                 area = G.pack_cards,
                 skip_materialize = true,
@@ -81,7 +82,7 @@ SMODS.Booster {
             }
         elseif selected_index == 5 then
             return {
-                set = "puyotro_puyotro_jokers",
+                set = "puyotro_puyotro_legendaries",
                 rarity = "Legendary",
                 area = G.pack_cards,
                 skip_materialize = true,
@@ -114,6 +115,7 @@ SMODS.Booster {
         weight = 0.4,
         atlas = "CustomBoosters",
         pos = { x = 1, y = 0 },
+        kind = 'Puyo Puyo Pack',
         group_key = "puyotro_boosters",
         discovered = true,
         loc_vars = function(self, info_queue, card)
@@ -146,7 +148,7 @@ SMODS.Booster {
             end
             if selected_index == 1 then
                 return {
-                    set = "puyotro_puyotro_jokers",
+                    set = "puyotro_puyotro_commons",
                     rarity = "Common",
                     area = G.pack_cards,
                     skip_materialize = true,
@@ -155,7 +157,7 @@ SMODS.Booster {
                 }
             elseif selected_index == 2 then
                 return {
-                    set = "puyotro_puyotro_jokers",
+                    set = "puyotro_puyotro_commons",
                     rarity = "Common",
                     area = G.pack_cards,
                     skip_materialize = true,
@@ -164,7 +166,7 @@ SMODS.Booster {
                 }
             elseif selected_index == 3 then
                 return {
-                    set = "puyotro_puyotro_jokers",
+                    set = "puyotro_puyotro_uncommons",
                     rarity = "Uncommon",
                     area = G.pack_cards,
                     skip_materialize = true,
@@ -173,7 +175,7 @@ SMODS.Booster {
                 }
             elseif selected_index == 4 then
                 return {
-                    set = "puyotro_puyotro_jokers",
+                    set = "puyotro_puyotro_rares",
                     rarity = "Rare",
                     area = G.pack_cards,
                     skip_materialize = true,
@@ -182,7 +184,7 @@ SMODS.Booster {
                 }
             elseif selected_index == 5 then
                 return {
-                    set = "puyotro_puyotro_jokers",
+                    set = "puyotro_puyotro_legendaries",
                     rarity = "Legendary",
                     area = G.pack_cards,
                     skip_materialize = true,
@@ -215,6 +217,7 @@ SMODS.Booster {
             weight = 0.4,
             atlas = "CustomBoosters",
             pos = { x = 2, y = 0 },
+            kind = 'Puyo Puyo Pack',
             group_key = "puyotro_boosters",
             discovered = true,
             loc_vars = function(self, info_queue, card)
@@ -247,7 +250,7 @@ SMODS.Booster {
                 end
                 if selected_index == 1 then
                     return {
-                        set = "puyotro_puyotro_jokers",
+                        set = "puyotro_puyotro_commons",
                         rarity = "Common",
                         area = G.pack_cards,
                         skip_materialize = true,
@@ -256,7 +259,7 @@ SMODS.Booster {
                     }
                 elseif selected_index == 2 then
                     return {
-                        set = "puyotro_puyotro_jokers",
+                        set = "puyotro_puyotro_commons",
                         rarity = "Common",
                         area = G.pack_cards,
                         skip_materialize = true,
@@ -265,7 +268,7 @@ SMODS.Booster {
                     }
                 elseif selected_index == 3 then
                     return {
-                        set = "puyotro_puyotro_jokers",
+                        set = "puyotro_puyotro_uncommons",
                         rarity = "Uncommon",
                         area = G.pack_cards,
                         skip_materialize = true,
@@ -274,7 +277,7 @@ SMODS.Booster {
                     }
                 elseif selected_index == 4 then
                     return {
-                        set = "puyotro_puyotro_jokers",
+                        set = "puyotro_puyotro_rares",
                         rarity = "Rare",
                         area = G.pack_cards,
                         skip_materialize = true,
@@ -283,7 +286,7 @@ SMODS.Booster {
                     }
                 elseif selected_index == 5 then
                     return {
-                        set = "puyotro_puyotro_jokers",
+                        set = "puyotro_puyotro_legendaries",
                         rarity = "Legendary",
                         area = G.pack_cards,
                         skip_materialize = true,
@@ -316,6 +319,7 @@ SMODS.Booster {
                 weight = 0.1,
                 atlas = "CustomBoosters",
                 pos = { x = 3, y = 0 },
+                kind = 'Puyo Puyo Pack',
                 group_key = "puyotro_boosters",
                 discovered = true,
                 loc_vars = function(self, info_queue, card)
@@ -348,7 +352,7 @@ SMODS.Booster {
                     end
                     if selected_index == 1 then
                         return {
-                            set = "puyotro_puyotro_jokers",
+                            set = "puyotro_puyotro_commons",
                             rarity = "Common",
                             area = G.pack_cards,
                             skip_materialize = true,
@@ -357,7 +361,7 @@ SMODS.Booster {
                         }
                     elseif selected_index == 2 then
                         return {
-                            set = "puyotro_puyotro_jokers",
+                            set = "puyotro_puyotro_commons",
                             rarity = "Common",
                             area = G.pack_cards,
                             skip_materialize = true,
@@ -366,7 +370,7 @@ SMODS.Booster {
                         }
                     elseif selected_index == 3 then
                         return {
-                            set = "puyotro_puyotro_jokers",
+                            set = "puyotro_puyotro_uncommons",
                             rarity = "Uncommon",
                             area = G.pack_cards,
                             skip_materialize = true,
@@ -375,7 +379,7 @@ SMODS.Booster {
                         }
                     elseif selected_index == 4 then
                         return {
-                            set = "puyotro_puyotro_jokers",
+                            set = "puyotro_puyotro_rares",
                             rarity = "Rare",
                             area = G.pack_cards,
                             skip_materialize = true,
@@ -384,7 +388,7 @@ SMODS.Booster {
                         }
                     elseif selected_index == 5 then
                         return {
-                            set = "puyotro_puyotro_jokers",
+                            set = "puyotro_puyotro_legendaries",
                             rarity = "Legendary",
                             area = G.pack_cards,
                             skip_materialize = true,

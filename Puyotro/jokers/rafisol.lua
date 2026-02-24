@@ -35,7 +35,7 @@ SMODS.Joker{ --Rafisol
     unlocked = true,
     discovered = true,
     atlas = 'CustomJokers',
-    pools = { ["puyotro_cm37jokers_jokers"] = true },
+    pools = { ["puyotro_cm37jokers_jokers"] = true, ["puyotro_puyotro_legendaries"] = true },
     soul_pos = {
         x = 5,
         y = 10
