@@ -14,7 +14,6 @@ SMODS.Booster {
     atlas = "CustomBoosters",
     pos = { x = 0, y = 0 },
     kind = 'Puyo Puyo Pack',
-    group_key = "puyotro_boosters",
     discovered = true,
     loc_vars = function(self, info_queue, card)
         local cfg = (card and card.ability) or self.config
@@ -116,7 +115,6 @@ SMODS.Booster {
         atlas = "CustomBoosters",
         pos = { x = 1, y = 0 },
         kind = 'Puyo Puyo Pack',
-        group_key = "puyotro_boosters",
         discovered = true,
         loc_vars = function(self, info_queue, card)
             local cfg = (card and card.ability) or self.config
@@ -218,7 +216,6 @@ SMODS.Booster {
             atlas = "CustomBoosters",
             pos = { x = 2, y = 0 },
             kind = 'Puyo Puyo Pack',
-            group_key = "puyotro_boosters",
             discovered = true,
             loc_vars = function(self, info_queue, card)
                 local cfg = (card and card.ability) or self.config
@@ -320,7 +317,6 @@ SMODS.Booster {
                 atlas = "CustomBoosters",
                 pos = { x = 3, y = 0 },
                 kind = 'Puyo Puyo Pack',
-                group_key = "puyotro_boosters",
                 discovered = true,
                 loc_vars = function(self, info_queue, card)
                     local cfg = (card and card.ability) or self.config

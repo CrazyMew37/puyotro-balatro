@@ -36,7 +36,7 @@ SMODS.Joker{ --Onion Pixie
     pools = { ["puyotro_puyotro_jokers"] = true, ["puyotro_puyotro_quest_deck_jokers"] = true, ["puyotro_puyotro_commons"] = true, ["puyotro_Food"] = true },
     
     calculate = function(self, card, context)
-        if context.selling_card  then
+        if context.selling_self  then
             G.E_MANAGER:add_event(Event({
                 func = function()
                     play_sound("puyotro_puyogarbage")

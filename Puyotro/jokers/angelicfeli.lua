@@ -10,7 +10,7 @@ SMODS.Joker{ --Angelic Feli
     loc_txt = {
         ['name'] = 'Angelic Feli',
         ['text'] = {
-            [1] = 'Played {C:attention}Stone Cards{} score {X:enhanced,C:white}^#1#{} Mult',
+            [1] = 'Played {C:attention}Stone Cards{} score {X:red,C:gold}^#1#{} Mult',
             [2] = '{C:green}#2# in #3# {}chance to convert scoring',
             [3] = 'cards into {C:attention}Stone Cards{}'
         },

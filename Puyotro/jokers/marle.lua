@@ -3,13 +3,13 @@ SMODS.Joker{ --Marle
     key = "marle",
     config = {
         extra = {
-            MarleAmount = 4
+            MarleAmount = 3
         }
     },
     loc_txt = {
         ['name'] = 'Marle',
         ['text'] = {
-            [1] = '{X:enhanced,C:white}^#1#{} Chips if played hand',
+            [1] = '{X:chips,C:gold}^#1#{} Chips if played hand',
             [2] = 'is a {C:attention}High Card{}'
         },
         ['unlock'] = {

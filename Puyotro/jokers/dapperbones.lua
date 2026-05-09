@@ -4,7 +4,7 @@ SMODS.Joker{ --Dapper Bones
     config = {
         extra = {
             DapperMult = 1,
-            DapperValue = 1,
+            DapperValue = 1.5,
             enhancedcardsindeck = 0
         }
     },

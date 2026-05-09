@@ -10,7 +10,7 @@ SMODS.Joker{ --Squares
     loc_txt = {
         ['name'] = 'Squares',
         ['text'] = {
-            [1] = '{X:enhanced,C:white}^#1#{} Chips if played hand',
+            [1] = '{X:chips,C:gold}^#1#{} Chips if played hand',
             [2] = 'is a {C:attention}Five of a Kind{},',
             [3] = '{C:attention}Flush House{}, or {C:attention}Flush Five{}',
             [4] = 'Makes {C:attention}3{} copies of the',
