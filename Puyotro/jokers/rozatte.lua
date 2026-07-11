@@ -3,7 +3,7 @@ SMODS.Joker{ --Rozatte
     key = "rozatte",
     config = {
         extra = {
-            odds = 4
+            odds = 3
         }
     },
     loc_txt = {

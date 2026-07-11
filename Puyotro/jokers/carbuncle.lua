@@ -9,7 +9,7 @@ SMODS.Joker{ --Carbuncle
             CarbyMultIncrease = 6,
             CarbyChipIncrease = 20,
             CarbyMoneyIncrease = 1,
-            odds = 10
+            odds = 5
         }
     },
     loc_txt = {

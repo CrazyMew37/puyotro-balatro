@@ -5,7 +5,7 @@ SMODS.Joker{ --Masked Satan
         extra = {
             MaskedSatanLevelUp = 2,
             MaskedSatanIncrease = 1,
-            odds = 12
+            odds = 8
         }
     },
     loc_txt = {

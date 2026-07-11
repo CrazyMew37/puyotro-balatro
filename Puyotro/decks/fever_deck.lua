@@ -67,6 +67,6 @@ SMODS.Back {
             end
         }))
         G.GAME.starting_params.hands = G.GAME.starting_params.hands - 1
-        G.GAME.starting_params.hands = G.GAME.starting_params.hands + 2
+        G.GAME.starting_params.discards = G.GAME.starting_params.discards + 2
     end
 }

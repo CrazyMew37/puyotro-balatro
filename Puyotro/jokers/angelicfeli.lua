@@ -4,7 +4,7 @@ SMODS.Joker{ --Angelic Feli
     config = {
         extra = {
             FeliExpo = 1.5,
-            odds = 8
+            odds = 4
         }
     },
     loc_txt = {

@@ -3,7 +3,7 @@ SMODS.Joker{ --Issen
     key = "issen",
     config = {
         extra = {
-            odds = 8
+            odds = 4
         }
     },
     loc_txt = {

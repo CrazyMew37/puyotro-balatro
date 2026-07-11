@@ -3,7 +3,7 @@ SMODS.Joker{ --Ms. Accord
     key = "msaccord",
     config = {
         extra = {
-            odds = 10
+            odds = 6
         }
     },
     loc_txt = {

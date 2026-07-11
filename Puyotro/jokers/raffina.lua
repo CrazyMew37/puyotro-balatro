@@ -3,7 +3,7 @@ SMODS.Joker{ --Raffina
     key = "raffina",
     config = {
         extra = {
-            odds = 10
+            odds = 6
         }
     },
     loc_txt = {

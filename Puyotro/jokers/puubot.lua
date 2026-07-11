@@ -3,7 +3,7 @@ SMODS.Joker{ --Puubot
     key = "puubot",
     config = {
         extra = {
-            odds = 10
+            odds = 5
         }
     },
     loc_txt = {

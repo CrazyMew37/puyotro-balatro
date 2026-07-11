@@ -4,7 +4,7 @@ SMODS.Back {
     pos = { x = 3, y = 0 },
     config = {
         extra = {
-            all_blinds_size0 = 1.75
+            all_blinds_size0 = 2
         },
     },
     loc_txt = {
@@ -12,9 +12,8 @@ SMODS.Back {
         text = {
             [1] = 'Begin with an {C:money}Eternal{}',
             [2] = 'Ally and Rafisol',
-            [3] = 'Begin with no {C:hearts}Heart{} Cards',
-            [4] = '{C:attention}{C:red}X1.75{}{} Blind Size',
-            [5] = 'Must Beat Ante {C:attention}10{} to Win'
+            [3] = 'Begin with 0 {C:hearts}Hearts{}',
+            [4] = '{C:attention}{C:red}X2{}{} Blind Size'
         },
     },
     unlocked = true,
@@ -65,13 +64,9 @@ SMODS.Back {
         }))
         G.E_MANAGER:add_event(Event({
             func = function()
-                G.GAME.starting_params.ante_scaling = G.GAME.starting_params.ante_scaling * 1.75
+                G.GAME.starting_params.ante_scaling = G.GAME.starting_params.ante_scaling * 2
                 return true
             end
         }))
-        local ante = G.GAME.win_ante + 2
-        local int_part, frac_part = math.modf(ante)
-        local rounded = int_part + (frac_part >= 0.5 and 1 or 0)
-        G.GAME.win_ante = rounded
     end
 }

@@ -4,7 +4,7 @@ SMODS.Joker{ --Archan
     config = {
         extra = {
             ArchanMult = 5,
-            odds = 4
+            odds = 3
         }
     },
     loc_txt = {
