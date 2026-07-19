@@ -43,32 +43,6 @@ SMODS.Joker{ --Jaan
     end,
     
     calculate = function(self, card, context)
-        if (context.end_of_round or context.reroll_shop or context.buying_card or
-            context.selling_card or context.ending_shop or context.starting_shop or 
-            context.ending_booster or context.skipping_booster or context.open_booster or
-            context.skip_blind or context.before or context.pre_discard or context.setting_blind or
-        context.using_consumeable)   then
-            local JaanMult_value = card.ability.extra.JaanMult
-            return {
-                func = function()
-                    
-                    for i = 1, #G.jokers.cards do
-                        if G.jokers.cards[i] == card then
-                            card.ability.extra.JaanMult = i
-                            break
-                        end
-                    end
-                    return true
-                end,
-                extra = {
-                    func = function()
-                        card.ability.extra.JaanMult = (card.ability.extra.JaanMult) * card.ability.extra.JaanIncrease
-                        return true
-                    end,
-                    colour = G.C.MULT
-                }
-            }
-        end
         if context.cardarea == G.jokers and context.joker_main  then
             local JaanMult_value = card.ability.extra.JaanMult
             for i = 1, #G.jokers.cards do

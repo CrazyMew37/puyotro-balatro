@@ -41,33 +41,6 @@ SMODS.Joker{ --Scylla
     end,
     
     calculate = function(self, card, context)
-        if (context.end_of_round or context.reroll_shop or context.buying_card or
-            context.selling_card or context.ending_shop or context.starting_shop or 
-            context.ending_booster or context.skipping_booster or context.open_booster or
-            context.skip_blind or context.before or context.pre_discard or context.setting_blind or
-        context.using_consumeable)   then
-            local ChicoMult_value = card.ability.extra.ChicoMult
-            return {
-                func = function()
-                    card.ability.extra.ChicoMult = math.floor(lenient_bignum(G.GAME.dollars / 5))
-                    return true
-                end,
-                extra = {
-                    func = function()
-                        card.ability.extra.ChicoMult = (card.ability.extra.ChicoMult) / 10
-                        return true
-                    end,
-                    colour = G.C.MULT,
-                    extra = {
-                        func = function()
-                            card.ability.extra.ChicoMult = (card.ability.extra.ChicoMult) + 1
-                            return true
-                        end,
-                        colour = G.C.GREEN
-                    }
-                }
-            }
-        end
         if context.cardarea == G.jokers and context.joker_main  then
             local ChicoMult_value = card.ability.extra.ChicoMult
             card.ability.extra.ChicoMult = math.floor(lenient_bignum(G.GAME.dollars / 5))

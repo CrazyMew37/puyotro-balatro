@@ -4,7 +4,7 @@ SMODS.Joker{ --Banshee Trio
     config = {
         extra = {
             BansheeMult = 0,
-            BansheeIncrease = 1
+            BansheeIncrease = 2
         }
     },
     loc_txt = {

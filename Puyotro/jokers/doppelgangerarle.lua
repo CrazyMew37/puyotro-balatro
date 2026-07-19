@@ -5,8 +5,8 @@ SMODS.Joker{ --Doppelganger Arle
         extra = {
             ArleMult = 4,
             ArleIncrease = 2,
-            odds = 25,
-            odds2 = 1000
+            odds = 20,
+            odds2 = 100
         }
     },
     loc_txt = {

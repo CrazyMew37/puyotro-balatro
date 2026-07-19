@@ -8,7 +8,7 @@
     "description": "A collection of Jokers based on Puyo Puyo made by CrazyMew37, made with Joker Forge",
     "prefix": "puyotro",
     "main_file": "main.lua",
-    "version": "1.3.0",
+    "version": "1.3.1",
     "priority": 0,
     "badge_colour": "33cc00",
     "badge_text_colour": "FFFFFF",
@@ -1852,7 +1852,7 @@
                 "valueType": "number"
               },
               "chance_denominator": {
-                "value": 25,
+                "value": 20,
                 "valueType": "number"
               },
               "respect_probability_effects": true,
@@ -1877,7 +1877,7 @@
                 "valueType": "number"
               },
               "chance_denominator": {
-                "value": 1000,
+                "value": 100,
                 "valueType": "number"
               },
               "respect_probability_effects": true,
@@ -2400,19 +2400,22 @@
               "params": {
                 "variable_name": {
                   "value": "RingoMult",
-                  "label": "RingoMult",
                   "valueType": "user_var"
                 },
                 "operation": {
                   "value": "set",
-                  "label": "Set to value",
                   "valueType": "text"
                 },
-                "index_method": {},
-                "joker_key": {
-                  "value": "j_joker"
+                "index_method": {
+                  "valueType": "unknown"
                 },
-                "joker_variable": {},
+                "joker_key": {
+                  "value": "j_joker",
+                  "valueType": "unknown"
+                },
+                "joker_variable": {
+                  "valueType": "unknown"
+                },
                 "value": {
                   "value": "GAMEVAR:red_sealed_cards_in_deck|1|0",
                   "valueType": "game_var"
@@ -2425,22 +2428,24 @@
               "params": {
                 "variable_name": {
                   "value": "RingoMult",
-                  "label": "RingoMult",
                   "valueType": "user_var"
                 },
                 "operation": {
                   "value": "multiply",
-                  "label": "Multiply by value",
                   "valueType": "text"
                 },
-                "index_method": {},
-                "joker_key": {
-                  "value": "j_joker"
+                "index_method": {
+                  "valueType": "unknown"
                 },
-                "joker_variable": {},
+                "joker_key": {
+                  "value": "j_joker",
+                  "valueType": "unknown"
+                },
+                "joker_variable": {
+                  "valueType": "unknown"
+                },
                 "value": {
                   "value": "RingoGain",
-                  "label": "RingoGain",
                   "valueType": "user_var"
                 }
               }
@@ -2451,19 +2456,22 @@
               "params": {
                 "variable_name": {
                   "value": "RingoMult",
-                  "label": "RingoMult",
                   "valueType": "user_var"
                 },
                 "operation": {
                   "value": "increment",
-                  "label": "Increment by value",
                   "valueType": "text"
                 },
-                "index_method": {},
-                "joker_key": {
-                  "value": "j_joker"
+                "index_method": {
+                  "valueType": "unknown"
                 },
-                "joker_variable": {},
+                "joker_key": {
+                  "value": "j_joker",
+                  "valueType": "unknown"
+                },
+                "joker_variable": {
+                  "valueType": "unknown"
+                },
                 "value": {
                   "value": 1,
                   "valueType": "number"
@@ -2476,7 +2484,6 @@
               "params": {
                 "value": {
                   "value": "RingoMult",
-                  "label": "RingoMult",
                   "valueType": "conflicted_user_var"
                 }
               }
@@ -2560,19 +2567,22 @@
               "params": {
                 "variable_name": {
                   "value": "RisukumaMult",
-                  "label": "RisukumaMult",
                   "valueType": "user_var"
                 },
                 "operation": {
                   "value": "set",
-                  "label": "Set to value",
                   "valueType": "text"
                 },
-                "index_method": {},
-                "joker_key": {
-                  "value": "j_joker"
+                "index_method": {
+                  "valueType": "unknown"
                 },
-                "joker_variable": {},
+                "joker_key": {
+                  "value": "j_joker",
+                  "valueType": "unknown"
+                },
+                "joker_variable": {
+                  "valueType": "unknown"
+                },
                 "value": {
                   "value": "GAMEVAR:gold_sealed_cards_in_deck|1|0",
                   "valueType": "game_var"
@@ -2585,22 +2595,24 @@
               "params": {
                 "variable_name": {
                   "value": "RisukumaMult",
-                  "label": "RisukumaMult",
                   "valueType": "user_var"
                 },
                 "operation": {
                   "value": "multiply",
-                  "label": "Multiply by value",
                   "valueType": "text"
                 },
-                "index_method": {},
-                "joker_key": {
-                  "value": "j_joker"
+                "index_method": {
+                  "valueType": "unknown"
                 },
-                "joker_variable": {},
+                "joker_key": {
+                  "value": "j_joker",
+                  "valueType": "unknown"
+                },
+                "joker_variable": {
+                  "valueType": "unknown"
+                },
                 "value": {
                   "value": "RisukumaGain",
-                  "label": "RisukumaGain",
                   "valueType": "user_var"
                 }
               }
@@ -2611,19 +2623,22 @@
               "params": {
                 "variable_name": {
                   "value": "RisukumaMult",
-                  "label": "RisukumaMult",
                   "valueType": "user_var"
                 },
                 "operation": {
                   "value": "increment",
-                  "label": "Increment by value",
                   "valueType": "text"
                 },
-                "index_method": {},
-                "joker_key": {
-                  "value": "j_joker"
+                "index_method": {
+                  "valueType": "unknown"
                 },
-                "joker_variable": {},
+                "joker_key": {
+                  "value": "j_joker",
+                  "valueType": "unknown"
+                },
+                "joker_variable": {
+                  "valueType": "unknown"
+                },
                 "value": {
                   "value": 1,
                   "valueType": "number"
@@ -2636,7 +2651,6 @@
               "params": {
                 "value": {
                   "value": "RisukumaMult",
-                  "label": "RisukumaMult",
                   "valueType": "conflicted_user_var"
                 }
               }
@@ -2720,19 +2734,22 @@
               "params": {
                 "variable_name": {
                   "value": "MaguroMult",
-                  "label": "MaguroMult",
                   "valueType": "user_var"
                 },
                 "operation": {
                   "value": "set",
-                  "label": "Set to value",
                   "valueType": "text"
                 },
-                "index_method": {},
-                "joker_key": {
-                  "value": "j_joker"
+                "index_method": {
+                  "valueType": "unknown"
                 },
-                "joker_variable": {},
+                "joker_key": {
+                  "value": "j_joker",
+                  "valueType": "unknown"
+                },
+                "joker_variable": {
+                  "valueType": "unknown"
+                },
                 "value": {
                   "value": "GAMEVAR:purple_sealed_cards_in_deck|1|0",
                   "valueType": "game_var"
@@ -2745,22 +2762,24 @@
               "params": {
                 "variable_name": {
                   "value": "MaguroMult",
-                  "label": "MaguroMult",
                   "valueType": "user_var"
                 },
                 "operation": {
                   "value": "multiply",
-                  "label": "Multiply by value",
                   "valueType": "text"
                 },
-                "index_method": {},
-                "joker_key": {
-                  "value": "j_joker"
+                "index_method": {
+                  "valueType": "unknown"
                 },
-                "joker_variable": {},
+                "joker_key": {
+                  "value": "j_joker",
+                  "valueType": "unknown"
+                },
+                "joker_variable": {
+                  "valueType": "unknown"
+                },
                 "value": {
                   "value": "MaguroGain",
-                  "label": "MaguroGain",
                   "valueType": "user_var"
                 }
               }
@@ -2771,19 +2790,22 @@
               "params": {
                 "variable_name": {
                   "value": "MaguroMult",
-                  "label": "MaguroMult",
                   "valueType": "user_var"
                 },
                 "operation": {
                   "value": "increment",
-                  "label": "Increment by value",
                   "valueType": "text"
                 },
-                "index_method": {},
-                "joker_key": {
-                  "value": "j_joker"
+                "index_method": {
+                  "valueType": "unknown"
                 },
-                "joker_variable": {},
+                "joker_key": {
+                  "value": "j_joker",
+                  "valueType": "unknown"
+                },
+                "joker_variable": {
+                  "valueType": "unknown"
+                },
                 "value": {
                   "value": 1,
                   "valueType": "number"
@@ -2796,7 +2818,6 @@
               "params": {
                 "value": {
                   "value": "MaguroMult",
-                  "label": "MaguroMult",
                   "valueType": "conflicted_user_var"
                 }
               }
@@ -9144,7 +9165,6 @@
                 },
                 "edition": {
                   "value": "negative",
-                  "label": "Negative (+1 Joker slot)",
                   "valueType": "text"
                 },
                 "sticker": {
@@ -9153,7 +9173,6 @@
                 },
                 "ignore_slots": {
                   "value": "ignore",
-                  "label": "Ignore",
                   "valueType": "text"
                 }
               }
@@ -9239,7 +9258,6 @@
                 },
                 "edition": {
                   "value": "negative",
-                  "label": "Negative (+1 Joker slot)",
                   "valueType": "text"
                 },
                 "sticker": {
@@ -9248,7 +9266,6 @@
                 },
                 "ignore_slots": {
                   "value": "ignore",
-                  "label": "Ignore",
                   "valueType": "text"
                 }
               }
@@ -9334,7 +9351,6 @@
                 },
                 "edition": {
                   "value": "negative",
-                  "label": "Negative (+1 Joker slot)",
                   "valueType": "text"
                 },
                 "sticker": {
@@ -9343,7 +9359,6 @@
                 },
                 "ignore_slots": {
                   "value": "ignore",
-                  "label": "Ignore",
                   "valueType": "text"
                 }
               }
@@ -9410,7 +9425,6 @@
                 },
                 "edition": {
                   "value": "negative",
-                  "label": "Negative (+1 Joker slot)",
                   "valueType": "text"
                 },
                 "sticker": {
@@ -9419,7 +9433,6 @@
                 },
                 "ignore_slots": {
                   "value": "ignore",
-                  "label": "Ignore",
                   "valueType": "text"
                 }
               }
@@ -10174,104 +10187,6 @@
       "unlockDescription": "Unlocked by default.",
       "rules": [
         {
-          "id": "a90cb56d-ca62-42bf-a2bb-08335ebb218b",
-          "trigger": "player_action",
-          "blueprintCompatible": true,
-          "conditionGroups": [],
-          "effects": [
-            {
-              "id": "7f5a6bd7-5233-483f-9789-eaa076300824",
-              "type": "modify_internal_variable",
-              "params": {
-                "variable_name": {
-                  "value": "ChicoMult",
-                  "valueType": "user_var"
-                },
-                "operation": {
-                  "value": "set",
-                  "valueType": "text"
-                },
-                "index_method": {
-                  "valueType": "unknown"
-                },
-                "joker_key": {
-                  "value": "j_joker",
-                  "valueType": "unknown"
-                },
-                "joker_variable": {
-                  "valueType": "unknown"
-                },
-                "value": {
-                  "value": "GAMEVAR:money_per_5|1|0",
-                  "valueType": "game_var"
-                }
-              }
-            },
-            {
-              "id": "87631025-6de4-4215-b5b4-1d33c671bb62",
-              "type": "modify_internal_variable",
-              "params": {
-                "variable_name": {
-                  "value": "ChicoMult",
-                  "valueType": "user_var"
-                },
-                "operation": {
-                  "value": "divide",
-                  "valueType": "text"
-                },
-                "index_method": {
-                  "valueType": "unknown"
-                },
-                "joker_key": {
-                  "value": "j_joker",
-                  "valueType": "unknown"
-                },
-                "joker_variable": {
-                  "valueType": "unknown"
-                },
-                "value": {
-                  "value": 10,
-                  "valueType": "number"
-                }
-              }
-            },
-            {
-              "id": "e797370b-0895-4289-a7d0-a3c379f7573e",
-              "type": "modify_internal_variable",
-              "params": {
-                "variable_name": {
-                  "value": "ChicoMult",
-                  "valueType": "user_var"
-                },
-                "operation": {
-                  "value": "increment",
-                  "valueType": "text"
-                },
-                "index_method": {
-                  "valueType": "unknown"
-                },
-                "joker_key": {
-                  "value": "j_joker",
-                  "valueType": "unknown"
-                },
-                "joker_variable": {
-                  "valueType": "unknown"
-                },
-                "value": {
-                  "value": 1,
-                  "valueType": "number"
-                }
-              }
-            }
-          ],
-          "randomGroups": [],
-          "loops": [],
-          "position": {
-            "x": 549,
-            "y": 173
-          }
-        },
-        {
           "id": "3e776d74-6561-49dc-98f7-3f7bf25ac614",
           "trigger": "hand_played",
           "blueprintCompatible": true,
@@ -10432,104 +10347,6 @@
       "unlockCount": 1,
       "unlockDescription": "Unlocked by default.",
       "rules": [
-        {
-          "id": "a90cb56d-ca62-42bf-a2bb-08335ebb218b",
-          "trigger": "player_action",
-          "blueprintCompatible": true,
-          "conditionGroups": [],
-          "effects": [
-            {
-              "id": "7f5a6bd7-5233-483f-9789-eaa076300824",
-              "type": "modify_internal_variable",
-              "params": {
-                "variable_name": {
-                  "value": "ChicoMult",
-                  "valueType": "user_var"
-                },
-                "operation": {
-                  "value": "set",
-                  "valueType": "text"
-                },
-                "index_method": {
-                  "valueType": "unknown"
-                },
-                "joker_key": {
-                  "value": "j_joker",
-                  "valueType": "unknown"
-                },
-                "joker_variable": {
-                  "valueType": "unknown"
-                },
-                "value": {
-                  "value": "GAMEVAR:money_per_5|1|0",
-                  "valueType": "game_var"
-                }
-              }
-            },
-            {
-              "id": "87631025-6de4-4215-b5b4-1d33c671bb62",
-              "type": "modify_internal_variable",
-              "params": {
-                "variable_name": {
-                  "value": "ChicoMult",
-                  "valueType": "user_var"
-                },
-                "operation": {
-                  "value": "divide",
-                  "valueType": "text"
-                },
-                "index_method": {
-                  "valueType": "unknown"
-                },
-                "joker_key": {
-                  "value": "j_joker",
-                  "valueType": "unknown"
-                },
-                "joker_variable": {
-                  "valueType": "unknown"
-                },
-                "value": {
-                  "value": 10,
-                  "valueType": "number"
-                }
-              }
-            },
-            {
-              "id": "e797370b-0895-4289-a7d0-a3c379f7573e",
-              "type": "modify_internal_variable",
-              "params": {
-                "variable_name": {
-                  "value": "ChicoMult",
-                  "valueType": "user_var"
-                },
-                "operation": {
-                  "value": "increment",
-                  "valueType": "text"
-                },
-                "index_method": {
-                  "valueType": "unknown"
-                },
-                "joker_key": {
-                  "value": "j_joker",
-                  "valueType": "unknown"
-                },
-                "joker_variable": {
-                  "valueType": "unknown"
-                },
-                "value": {
-                  "value": 1,
-                  "valueType": "number"
-                }
-              }
-            }
-          ],
-          "randomGroups": [],
-          "loops": [],
-          "position": {
-            "x": 549,
-            "y": 173
-          }
-        },
         {
           "id": "3e776d74-6561-49dc-98f7-3f7bf25ac614",
           "trigger": "hand_played",
@@ -11863,7 +11680,7 @@
           "id": "6d1aa156-8b60-42ff-97ed-4bf122cd298b",
           "name": "BansheeIncrease",
           "type": "number",
-          "initialValue": 1
+          "initialValue": 2
         }
       ],
       "placeholderCreditIndex": 6,
@@ -12298,77 +12115,6 @@
       "unlockCount": 1,
       "unlockDescription": "Unlocked by default.",
       "rules": [
-        {
-          "id": "ec793d9d-50d4-499e-a4a4-629b79bf9a2c",
-          "trigger": "player_action",
-          "blueprintCompatible": true,
-          "conditionGroups": [],
-          "effects": [
-            {
-              "id": "86def934-c8ff-4745-b8d4-aa1b7470ee53",
-              "type": "modify_internal_variable",
-              "params": {
-                "variable_name": {
-                  "value": "JaanMult",
-                  "valueType": "user_var"
-                },
-                "operation": {
-                  "value": "index",
-                  "valueType": "text"
-                },
-                "index_method": {
-                  "value": "self",
-                  "valueType": "text"
-                },
-                "joker_key": {
-                  "value": "j_joker",
-                  "valueType": "unknown"
-                },
-                "joker_variable": {
-                  "valueType": "unknown"
-                },
-                "value": {
-                  "value": 1,
-                  "valueType": "number"
-                }
-              }
-            },
-            {
-              "id": "49483465-a507-4334-8756-449e1a82e3be",
-              "type": "modify_internal_variable",
-              "params": {
-                "variable_name": {
-                  "value": "JaanMult",
-                  "valueType": "user_var"
-                },
-                "operation": {
-                  "value": "multiply",
-                  "valueType": "text"
-                },
-                "index_method": {
-                  "valueType": "unknown"
-                },
-                "joker_key": {
-                  "value": "j_joker",
-                  "valueType": "unknown"
-                },
-                "joker_variable": {
-                  "valueType": "unknown"
-                },
-                "value": {
-                  "value": "JaanIncrease",
-                  "valueType": "user_var"
-                }
-              }
-            }
-          ],
-          "randomGroups": [],
-          "loops": [],
-          "position": {
-            "x": 549,
-            "y": 173
-          }
-        },
         {
           "id": "a63f770d-f12d-422f-bd92-6139b80b049d",
           "trigger": "hand_played",
@@ -13809,7 +13555,8 @@
                   "valueType": "text"
                 },
                 "count": {
-                  "value": "2"
+                  "value": "2",
+                  "valueType": "unknown"
                 },
                 "enhancement": {
                   "value": "m_puyotro_puyocard",
@@ -13920,7 +13667,8 @@
                   "valueType": "text"
                 },
                 "count": {
-                  "value": "2"
+                  "value": "2",
+                  "valueType": "unknown"
                 },
                 "enhancement": {
                   "value": "m_puyotro_nuisancecard",
@@ -14015,7 +13763,8 @@
                   "valueType": "text"
                 },
                 "count": {
-                  "value": "2"
+                  "value": "2",
+                  "valueType": "unknown"
                 },
                 "enhancement": {
                   "value": "none",
@@ -15884,5 +15633,5 @@
     }
   ],
   "version": "1.0.0",
-  "exportedAt": "2026-07-09T05:43:10.561Z"
+  "exportedAt": "2026-07-19T23:34:27.943Z"
 }
